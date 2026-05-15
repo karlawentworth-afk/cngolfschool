@@ -1,0 +1,1773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Navarino Golf School for Women — Costa Navarino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     COSTA NAVARINO BRAND PALETTE
+     Pulled from their resort photography:
+     - Deep Ionian blue, soft sandstone, olive, warm white
+     ========================================================= */
+  :root {
+    --ink: #1a2733;            /* deep navy headlines */
+    --ink-soft: #3a4a5a;       /* body text */
+    --sea: #2d4a5f;            /* deep Ionian blue */
+    --sea-deep: #16344a;
+    --sand: #e8dfd1;           /* sandstone */
+    --sand-light: #f5efe5;     /* warm cream backgrounds */
+    --olive: #7a8467;          /* Kalamata olive */
+    --gold: #b08d57;           /* refined antique gold */
+    --paper: #fbf8f2;          /* main background */
+    --white: #ffffff;
+    --line: rgba(26, 39, 51, 0.12);
+    --line-soft: rgba(26, 39, 51, 0.06);
+
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+
+    --max-width: 1320px;
+    --gutter: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* =========================================================
+     TYPOGRAPHY
+     ========================================================= */
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  h1 { font-size: clamp(2.8rem, 6.5vw, 5.5rem); }
+  h2 { font-size: clamp(2rem, 4.5vw, 3.5rem); }
+  h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
+  h4 { font-size: 1.3rem; }
+
+  .display-italic { font-style: italic; color: var(--gold); }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--olive);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  p { margin-bottom: 1.2rem; }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* =========================================================
+     LAYOUT
+     ========================================================= */
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  section { padding: clamp(4rem, 9vw, 7rem) 0; }
+
+  /* =========================================================
+     NAVIGATION
+     ========================================================= */
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.4rem 0;
+    background: rgba(251, 248, 242, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line-soft);
+    transition: all 0.4s ease;
+  }
+
+  .nav-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .brand-cn {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .brand-cn span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--olive);
+    margin-top: 4px;
+  }
+
+  .brand-divider {
+    width: 1px;
+    height: 28px;
+    background: var(--line);
+  }
+
+  .brand-llg {
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .brand-llg em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--gold);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink);
+    position: relative;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--ink);
+    color: var(--paper) !important;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.7rem !important;
+    transition: background 0.3s;
+  }
+
+  .nav-cta:hover { background: var(--sea); color: var(--paper) !important; }
+
+  @media (max-width: 880px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+    .brand-divider, .brand-llg { display: none; }
+  }
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero {
+    min-height: 100vh;
+    padding: 8rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background:
+      linear-gradient(180deg, rgba(251,248,242,0.4) 0%, rgba(251,248,242,0) 30%, rgba(251,248,242,0.7) 100%),
+      linear-gradient(135deg, #c8d4dc 0%, #a8bcc8 40%, #7a96a5 100%);
+  }
+
+  /* Stylised coastline SVG backdrop */
+  .hero-art {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero-art svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+  }
+
+  .hero-grain {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0.4;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.15 0 0 0 0 0.2 0 0 0 0.08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+    align-items: end;
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+
+  .hero h1 {
+    color: var(--paper);
+    text-shadow: 0 2px 30px rgba(22, 52, 74, 0.25);
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 .line {
+    display: block;
+    opacity: 0;
+    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .hero h1 .line:nth-child(1) { animation-delay: 0.2s; }
+  .hero h1 .line:nth-child(2) { animation-delay: 0.45s; font-style: italic; color: var(--sand-light); }
+  .hero h1 .line:nth-child(3) { animation-delay: 0.7s; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero .eyebrow {
+    color: var(--paper);
+    opacity: 0;
+    animation: fadeUp 1s ease 0.05s forwards;
+  }
+
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+    font-weight: 300;
+    color: var(--paper);
+    line-height: 1.5;
+    max-width: 480px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.95s forwards;
+  }
+
+  .hero-meta {
+    border-top: 1px solid rgba(251, 248, 242, 0.3);
+    padding-top: 2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.15s forwards;
+  }
+
+  .hero-meta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .hero-meta-item .label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--sand-light);
+    opacity: 0.85;
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-meta-item .value {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    color: var(--paper);
+    line-height: 1;
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--paper);
+    opacity: 0.8;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .hero-scroll::after {
+    content: "";
+    width: 1px;
+    height: 40px;
+    background: var(--paper);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1); opacity: 0.4; }
+    50% { transform: scaleY(1.4); opacity: 1; }
+  }
+
+  /* =========================================================
+     INTRO / INVITATION
+     ========================================================= */
+  .invitation {
+    background: var(--paper);
+    text-align: center;
+    padding-top: clamp(5rem, 10vw, 8rem);
+  }
+
+  .invitation-quote {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  .invitation h2 {
+    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+    line-height: 1.35;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+
+  .invitation h2 em {
+    color: var(--gold);
+    font-weight: 400;
+  }
+
+  .invitation-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+  }
+
+  .invitation p {
+    max-width: 640px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  /* =========================================================
+     THE SCHOOL — feature section
+     ========================================================= */
+  .school {
+    background: var(--sand-light);
+    position: relative;
+  }
+
+  .school::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--line), transparent);
+  }
+
+  .school-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(2.5rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {
+    .school-grid { grid-template-columns: 1fr; }
+  }
+
+  .school-visual {
+    position: relative;
+    aspect-ratio: 4/5;
+    background: linear-gradient(135deg, #d4c5a9 0%, #b8a888 100%);
+    overflow: hidden;
+  }
+
+  .school-visual svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .school-visual-tag {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    background: rgba(22, 52, 74, 0.9);
+    color: var(--paper);
+    padding: 1.2rem 1.5rem;
+    backdrop-filter: blur(8px);
+  }
+
+  .school-visual-tag .label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--sand-light);
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+  }
+
+  .school-visual-tag .name {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-style: italic;
+  }
+
+  .school h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .school-lede {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.45;
+    color: var(--ink);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* =========================================================
+     PILLARS
+     ========================================================= */
+  .pillars {
+    background: var(--paper);
+  }
+
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 5rem;
+  }
+
+  .section-head h2 { margin-bottom: 1.2rem; }
+
+  .section-head p {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 900px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+  }
+
+  .pillar {
+    padding: 3rem 2rem;
+    border-bottom: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    position: relative;
+    transition: background 0.4s;
+  }
+
+  .pillar:nth-child(3n) { border-right: none; }
+
+  @media (max-width: 900px) {
+    .pillar { border-right: none; }
+  }
+
+  .pillar:hover { background: var(--sand-light); }
+
+  .pillar-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .pillar h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .pillar p { font-size: 0.95rem; }
+
+  /* =========================================================
+     PROFILING (the magic ingredient)
+     ========================================================= */
+  .profiling {
+    background: var(--sea-deep);
+    color: var(--sand-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .profiling::before {
+    content: "49";
+    position: absolute;
+    right: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--serif);
+    font-size: 32rem;
+    font-style: italic;
+    color: rgba(176, 141, 87, 0.06);
+    line-height: 0.8;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .profiling .container { position: relative; z-index: 1; }
+
+  .profiling .eyebrow { color: var(--gold); }
+
+  .profiling h2 {
+    color: var(--paper);
+    max-width: 820px;
+  }
+
+  .profiling-lede {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    max-width: 720px;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    color: rgba(251, 248, 242, 0.85);
+    font-weight: 300;
+  }
+
+  .profile-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 900px) {
+    .profile-cards { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .profile-card {
+    background: rgba(251, 248, 242, 0.04);
+    border: 1px solid rgba(251, 248, 242, 0.1);
+    padding: 1.6rem 1.3rem;
+    transition: all 0.4s;
+    cursor: default;
+  }
+
+  .profile-card:hover {
+    background: rgba(176, 141, 87, 0.1);
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .profile-card .pcard-num {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .profile-card .pcard-name {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--paper);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile-card .pcard-desc {
+    font-size: 0.78rem;
+    color: rgba(251, 248, 242, 0.65);
+    line-height: 1.5;
+  }
+
+  .profiling-note {
+    margin-top: 3rem;
+    text-align: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: rgba(251, 248, 242, 0.7);
+  }
+
+  /* =========================================================
+     EXPERIENCE / WHAT'S INCLUDED
+     ========================================================= */
+  .experience {
+    background: var(--paper);
+  }
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .experience-grid { grid-template-columns: 1fr; }
+  }
+
+  .day-card {
+    border-top: 1px solid var(--line);
+    padding: 2rem 0;
+  }
+
+  .day-card:last-child { border-bottom: 1px solid var(--line); }
+
+  .day-num {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .day-num .roman {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 2.2rem;
+    color: var(--gold);
+    line-height: 1;
+  }
+
+  .day-num .label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--olive);
+  }
+
+  .day-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .day-card p { font-size: 0.95rem; }
+
+  .included-box {
+    background: var(--sand-light);
+    padding: 2.5rem;
+    border: 1px solid var(--line);
+  }
+
+  .included-box h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--ink);
+  }
+
+  .included-list {
+    list-style: none;
+  }
+
+  .included-list li {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 0.92rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .included-list li:last-child { border-bottom: none; }
+
+  .included-list li::before {
+    content: "•";
+    color: var(--gold);
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  /* =========================================================
+     PACKAGES / PRICING
+     ========================================================= */
+  .packages {
+    background: var(--sand-light);
+  }
+
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 4rem;
+  }
+
+  @media (max-width: 900px) {
+    .packages-grid { grid-template-columns: 1fr; }
+  }
+
+  .package {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: all 0.4s;
+  }
+
+  .package.featured {
+    background: var(--ink);
+    color: var(--sand-light);
+    border-color: var(--ink);
+  }
+
+  .package.featured .package-name,
+  .package.featured .package-price,
+  .package.featured .package-includes h4 { color: var(--paper); }
+
+  .package.featured .package-feature::before { color: var(--gold); }
+
+  .package-badge {
+    position: absolute;
+    top: -12px;
+    left: 2rem;
+    background: var(--gold);
+    color: var(--paper);
+    padding: 0.4rem 1rem;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .package-name {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+  }
+
+  .package-name em { color: var(--gold); font-weight: 400; }
+
+  .package-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--olive);
+    margin-bottom: 2rem;
+  }
+
+  .package.featured .package-tag { color: var(--sand); }
+
+  .package-price {
+    font-family: var(--serif);
+    font-size: 2.6rem;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .package-price .currency {
+    font-size: 1.3rem;
+    vertical-align: top;
+    margin-right: 4px;
+    color: var(--gold);
+  }
+
+  .package-price-note {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .package.featured .package-price-note { color: rgba(251,248,242,0.6); border-color: rgba(251,248,242,0.15); }
+
+  .package-includes h4 {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+  }
+
+  .package.featured .package-includes h4 { color: var(--sand); }
+
+  .package-features {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .package-feature {
+    padding: 0.6rem 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  .package-feature::before {
+    content: "—";
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .package-btn {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    padding: 1rem;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: var(--sans);
+  }
+
+  .package-btn:hover { background: var(--ink); color: var(--paper); }
+
+  .package.featured .package-btn {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: transparent;
+  }
+
+  .package.featured .package-btn:hover { background: var(--gold); color: var(--ink); }
+
+  /* =========================================================
+     TESTIMONIAL
+     ========================================================= */
+  .testimonial {
+    background: var(--paper);
+    text-align: center;
+    padding: clamp(5rem, 10vw, 8rem) 0;
+  }
+
+  .testimonial-quote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    line-height: 1.35;
+    color: var(--ink);
+    max-width: 980px;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+
+  .testimonial-quote::before,
+  .testimonial-quote::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2rem auto;
+  }
+
+  .testimonial-attribution {
+    margin-top: 2rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--olive);
+  }
+
+  /* =========================================================
+     BOOKING / RESERVE
+     ========================================================= */
+  .reserve {
+    background: var(--sea-deep);
+    color: var(--sand-light);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .reserve-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .reserve-grid { grid-template-columns: 1fr; }
+  }
+
+  .reserve .eyebrow { color: var(--gold); }
+  .reserve h2 { color: var(--paper); margin-bottom: 1.5rem; }
+
+  .reserve-lede {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: rgba(251, 248, 242, 0.8);
+    margin-bottom: 3rem;
+    line-height: 1.5;
+  }
+
+  .dates-list {
+    list-style: none;
+  }
+
+  .date-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.15);
+  }
+
+  .date-info {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+  }
+
+  .date-month {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--paper);
+    line-height: 1;
+  }
+
+  .date-range {
+    font-size: 0.85rem;
+    color: rgba(251, 248, 242, 0.7);
+  }
+
+  .date-status {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+
+  .status-open { color: var(--gold); }
+  .status-limited { color: #d4a574; }
+  .status-waitlist { color: rgba(251, 248, 242, 0.5); }
+
+  .reserve-form {
+    background: rgba(251, 248, 242, 0.04);
+    border: 1px solid rgba(251, 248, 242, 0.12);
+    padding: 2.5rem;
+  }
+
+  .reserve-form h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.6rem;
+    color: var(--paper);
+    margin-bottom: 0.5rem;
+  }
+
+  .reserve-form-note {
+    font-size: 0.85rem;
+    color: rgba(251, 248, 242, 0.7);
+    margin-bottom: 2rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.4rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: rgba(251, 248, 242, 0.7);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.25);
+    color: var(--paper);
+    padding: 0.6rem 0;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-bottom-color: var(--gold);
+  }
+
+  .form-group select option { background: var(--sea-deep); }
+
+  .form-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--ink);
+    border: none;
+    padding: 1.2rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: var(--sans);
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .form-btn:hover { background: #c9a06a; }
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  .footer {
+    background: var(--ink);
+    color: rgba(251, 248, 242, 0.7);
+    padding: 4rem 0 2rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.1);
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  .footer h4 {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--paper);
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+  }
+
+  .footer-brand-name {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--paper);
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-brand-tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer ul { list-style: none; }
+  .footer li { padding: 0.4rem 0; }
+  .footer a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: rgba(251, 248, 242, 0.4);
+  }
+
+  /* =========================================================
+     DEMO BANNER
+     ========================================================= */
+  .demo-banner {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 200;
+    background: var(--gold);
+    color: var(--ink);
+    padding: 0.7rem 1.2rem;
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 500;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    border-radius: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand-mark">
+      <div class="brand-cn">
+        COSTA NAVARINO
+        <span>Messinia · Greece</span>
+      </div>
+      <div class="brand-divider"></div>
+      <div class="brand-llg">
+        Methodology by<em>Ladies Love Golf</em>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#school">The School</a>
+      <a href="#profiling">The Profiling</a>
+      <a href="#packages">Packages</a>
+      <a href="#reserve" class="nav-cta">Reserve</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  <div class="hero-art">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <!-- Sky gradient already on container -->
+      <!-- Sun glow -->
+      <defs>
+        <radialGradient id="sunglow" cx="78%" cy="22%" r="35%">
+          <stop offset="0%" stop-color="#f5e6c8" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#f5e6c8" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="hills" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#7a8b7c" stop-opacity="0.7"/>
+          <stop offset="100%" stop-color="#5a6b5c" stop-opacity="0.9"/>
+        </linearGradient>
+        <linearGradient id="fairway" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#a3b58a" stop-opacity="0.9"/>
+          <stop offset="100%" stop-color="#8a9d70" stop-opacity="1"/>
+        </linearGradient>
+        <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#5a8094" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#3a6075" stop-opacity="0.9"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="1600" height="900" fill="url(#sunglow)"/>
+
+      <!-- Distant mountains -->
+      <path d="M0,420 Q200,380 400,400 T800,390 Q1000,375 1200,395 T1600,400 L1600,500 L0,500 Z"
+            fill="#94a8b0" opacity="0.5"/>
+
+      <!-- Mid hills -->
+      <path d="M0,480 Q300,440 600,470 T1200,460 T1600,470 L1600,560 L0,560 Z"
+            fill="url(#hills)" opacity="0.85"/>
+
+      <!-- Olive grove dots on hills -->
+      <g fill="#5a6b5c" opacity="0.4">
+        <circle cx="200" cy="520" r="3"/>
+        <circle cx="240" cy="535" r="3"/>
+        <circle cx="280" cy="525" r="3"/>
+        <circle cx="380" cy="540" r="3"/>
+        <circle cx="450" cy="530" r="3"/>
+        <circle cx="520" cy="545" r="3"/>
+        <circle cx="700" cy="538" r="3"/>
+        <circle cx="760" cy="528" r="3"/>
+        <circle cx="900" cy="542" r="3"/>
+        <circle cx="1100" cy="535" r="3"/>
+        <circle cx="1250" cy="540" r="3"/>
+        <circle cx="1400" cy="530" r="3"/>
+      </g>
+
+      <!-- Sea -->
+      <path d="M0,560 L1600,560 L1600,720 L0,720 Z" fill="url(#sea)"/>
+
+      <!-- Beach -->
+      <path d="M0,720 Q400,700 800,710 T1600,705 L1600,760 L0,760 Z" fill="#d4c5a0" opacity="0.85"/>
+
+      <!-- Foreground fairway -->
+      <path d="M0,760 Q400,740 900,755 T1600,748 L1600,900 L0,900 Z" fill="url(#fairway)"/>
+
+      <!-- Subtle fairway texture lines -->
+      <g stroke="#7a8d68" stroke-width="0.5" opacity="0.4">
+        <path d="M0,800 Q400,790 900,800 T1600,795" fill="none"/>
+        <path d="M0,830 Q400,820 900,830 T1600,825" fill="none"/>
+        <path d="M0,860 Q400,850 900,860 T1600,855" fill="none"/>
+      </g>
+
+      <!-- Pin/flag silhouette -->
+      <g transform="translate(1180, 690)">
+        <line x1="0" y1="0" x2="0" y2="-60" stroke="#1a2733" stroke-width="1.5"/>
+        <path d="M0,-60 L18,-55 L0,-48 Z" fill="#b08d57"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-grain"></div>
+
+  <div class="hero-inner">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">A New Chapter In Greek Golf</span>
+          <h1>
+            <span class="line">The Navarino</span>
+            <span class="line">Golf School</span>
+            <span class="line">for Women.</span>
+          </h1>
+          <p class="hero-sub">
+            Three days on the Ionian coast. The world's only psychological profiling system for golf. A lower handicap, signed and sealed.
+          </p>
+        </div>
+        <div>
+          <div class="hero-meta">
+            <div class="hero-meta-grid">
+              <div class="hero-meta-item">
+                <div class="label">Cohort</div>
+                <div class="value">8 women</div>
+              </div>
+              <div class="hero-meta-item">
+                <div class="label">Duration</div>
+                <div class="value">3 days</div>
+              </div>
+              <div class="hero-meta-item">
+                <div class="label">Outcome</div>
+                <div class="value">−3 to −5 shots</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">Discover</div>
+</section>
+
+<!-- ============================================
+     INVITATION
+     ============================================ -->
+<section class="invitation">
+  <div class="container">
+    <div class="invitation-quote">
+      <span class="eyebrow">An Invitation</span>
+      <h2>
+        Most golf schools teach you to swing.<br>
+        <em>This one teaches you to play.</em>
+      </h2>
+      <div class="invitation-divider"></div>
+      <p>
+        Held exclusively at Costa Navarino — host of four signature courses and named World's Best Golf Venue by the World Golf Awards — The Navarino Golf School is an intensive transformation programme designed for women who are serious about their game.
+      </p>
+      <p>
+        It is the only school of its kind in the world. Eight women. Three days. One signed commitment to play better golf, for the rest of your life.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     THE SCHOOL
+     ============================================ -->
+<section class="school" id="school">
+  <div class="container">
+    <div class="school-grid">
+      <div class="school-visual">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="dunesSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#e8d4b8"/>
+              <stop offset="50%" stop-color="#d4c5a9"/>
+              <stop offset="100%" stop-color="#a8bcc8"/>
+            </linearGradient>
+            <linearGradient id="dunesSea" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#5a8094"/>
+              <stop offset="100%" stop-color="#3a6075"/>
+            </linearGradient>
+            <linearGradient id="dunesGrass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#a3b58a"/>
+              <stop offset="100%" stop-color="#7a8b67"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#dunesSky)"/>
+          <!-- Sun -->
+          <circle cx="290" cy="120" r="50" fill="#f5e6c8" opacity="0.8"/>
+          <!-- Distant land -->
+          <path d="M0,260 Q100,240 200,255 T400,250 L400,290 L0,290 Z" fill="#8b9a8f" opacity="0.6"/>
+          <!-- Sea -->
+          <path d="M0,290 L400,290 L400,360 L0,360 Z" fill="url(#dunesSea)"/>
+          <!-- Beach -->
+          <path d="M0,360 Q100,350 200,358 T400,355 L400,385 L0,385 Z" fill="#e0cfa8"/>
+          <!-- Dunes / fairway -->
+          <path d="M0,385 Q100,365 200,380 T400,375 L400,500 L0,500 Z" fill="url(#dunesGrass)"/>
+          <!-- Beach grass tufts -->
+          <g stroke="#5a6b3c" stroke-width="0.8" opacity="0.7">
+            <line x1="50" y1="395" x2="48" y2="385"/>
+            <line x1="52" y1="395" x2="55" y2="384"/>
+            <line x1="120" y1="390" x2="118" y2="380"/>
+            <line x1="122" y1="390" x2="125" y2="380"/>
+            <line x1="280" y1="392" x2="278" y2="382"/>
+            <line x1="282" y1="392" x2="285" y2="382"/>
+          </g>
+          <!-- Flag -->
+          <g transform="translate(150, 410)">
+            <line x1="0" y1="0" x2="0" y2="-50" stroke="#1a2733" stroke-width="1.2"/>
+            <path d="M0,-50 L14,-46 L0,-40 Z" fill="#b08d57"/>
+          </g>
+        </svg>
+        <div class="school-visual-tag">
+          <div class="label">The Setting</div>
+          <div class="name">The Dunes Course · Navarino Bay</div>
+        </div>
+      </div>
+
+      <div class="school-content">
+        <span class="eyebrow">The School</span>
+        <h2>Tour-level coaching, designed for women.</h2>
+        <p class="school-lede">
+          Every great golfer has a mental game coach. Now you do too — wrapped inside three days of personalised, intensive transformation at one of Europe's most exceptional resorts.
+        </p>
+        <p>
+          The school is built on a simple truth: most women don't need a better swing. They need to understand how their psychology shows up on the course, then receive a personal strategy to play their best golf consistently. We've spent over a decade coaching women, and we've identified 49 distinct psychological profiles — yours is one of them.
+        </p>
+        <p>
+          From the moment you arrive, you are coached as an individual. Two PGA professionals. A printed workbook personalised to your profile. Skills stations that target where you actually lose shots. A signed 90-day commitment that takes your handicap down — and keeps it there.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PILLARS
+     ============================================ -->
+<section class="pillars">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What Sets It Apart</span>
+      <h2>Four principles. <em class="display-italic">No compromises.</em></h2>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-num">— I</div>
+        <h3>Eight women, no more</h3>
+        <p>A genuinely intimate cohort. Real attention from two coaches, real friendships formed, real accountability that lasts long after you leave.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">— II</div>
+        <h3>Psychology first</h3>
+        <p>The only psychological profiling system for golf in the world. Forty-nine profiles. We find yours before you arrive, then we coach to it.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">— III</div>
+        <h3>Designed for women</h3>
+        <p>Built from over a decade of female-only coaching. Encouraging, honest, never patronising. You will not be coached like a man with a smaller swing.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">— IV</div>
+        <h3>Measurable results</h3>
+        <p>Most participants drop 3 to 5 shots in 90 days, tracked through the World Handicap System. The school is just the beginning.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">— V</div>
+        <h3>One-to-one with the lead coach</h3>
+        <p>A private session with Karla, our co-founder, on Day 2. Your personal pattern, in your own words, with a tailored plan for the next 90 days.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">— VI</div>
+        <h3>The Costa Navarino setting</h3>
+        <p>Four signature courses. The Anazoe Spa. The Ionian Sea outside your window. The school is exceptional — and so is everything around it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PROFILING
+     ============================================ -->
+<section class="profiling" id="profiling">
+  <div class="container">
+    <span class="eyebrow">The Profiling System</span>
+    <h2>Forty-nine ways of sabotaging a perfectly good round. One of them is yours.</h2>
+    <p class="profiling-lede">
+      Before you arrive, you complete a 30-question profile. From your answers, we identify a primary and secondary psychological pattern — the way your mind tends to interfere with your golf. Every workbook, every coaching session, every piece of feedback is built around your specific combination.
+    </p>
+
+    <div class="profile-cards">
+      <div class="profile-card">
+        <div class="pcard-num">No. 08</div>
+        <div class="pcard-name">The Overthinker</div>
+        <div class="pcard-desc">Drowning in swing thoughts. Ten ideas standing over the ball, none of them helping.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 09</div>
+        <div class="pcard-name">The Pressure Cooker</div>
+        <div class="pcard-desc">Every shot a test of worth. The first tee is the worst place on earth.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 23</div>
+        <div class="pcard-name">The Fear‑Fuelled Lottery</div>
+        <div class="pcard-desc">Anxiety creates tension, tension creates chaos. No two rounds the same.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 27</div>
+        <div class="pcard-name">The Knowledgeable Choker</div>
+        <div class="pcard-desc">Brilliant on the range. The course is a different person entirely.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 34</div>
+        <div class="pcard-name">The Nervous Roller Coaster</div>
+        <div class="pcard-desc">85 one week, 105 the next. No idea which golfer will turn up.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 40</div>
+        <div class="pcard-name">The Fearful Plateauer</div>
+        <div class="pcard-desc">Same handicap for years. Fear of trying anything new keeps you there.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 45</div>
+        <div class="pcard-name">The Curious Simplifier</div>
+        <div class="pcard-desc">Healthy mindset. Loves to learn. Just needs the right things to focus on.</div>
+      </div>
+      <div class="profile-card">
+        <div class="pcard-num">No. 49</div>
+        <div class="pcard-name">The Healthy Plateauer</div>
+        <div class="pcard-desc">Great attitude, smart decisions. Technically ready for a breakthrough.</div>
+      </div>
+    </div>
+
+    <p class="profiling-note">+ 41 more. One of them is genuinely, uncannily yours.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     EXPERIENCE / DAY BY DAY
+     ============================================ -->
+<section class="experience">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Three Days</span>
+      <h2>Discovery. Skills. <em class="display-italic">Commitment.</em></h2>
+    </div>
+
+    <div class="experience-grid">
+      <div>
+        <div class="day-card">
+          <div class="day-num">
+            <span class="roman">I</span>
+            <span class="label">Discovery & Foundation</span>
+          </div>
+          <h3>You meet yourself, properly</h3>
+          <p>Your profile is revealed in a personalised workbook. A mental game masterclass. A course management session. Then nine holes where we watch you play, take notes, and start to understand exactly where your shots are going.</p>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num">
+            <span class="roman">II</span>
+            <span class="label">Systems & Skills</span>
+          </div>
+          <h3>You learn where you actually lose shots</h3>
+          <p>A custom scorecard built around you. Short game decoded. Skills stations targeting bunkers, approach, putting and short game — each one coached to your profile. A 15-minute one-to-one with our lead coach. Six holes putting it all together.</p>
+        </div>
+
+        <div class="day-card">
+          <div class="day-num">
+            <span class="roman">III</span>
+            <span class="label">Commitment & Graduation</span>
+          </div>
+          <h3>You sign for a better golfer</h3>
+          <p>Course management built around how you actually play, not how a scratch golfer plays. A full 18-hole graduation round. A signed 90-day commitment. A celebration dinner with individual presentations. A WhatsApp group that keeps you honest until handicaps officially drop.</p>
+        </div>
+      </div>
+
+      <div class="included-box">
+        <h3>Included in every place</h3>
+        <ul class="included-list">
+          <li>Pre-arrival psychological profile, one of 49 unique combinations</li>
+          <li>Three days of intensive coaching with two PGA professionals</li>
+          <li>Personalised printed workbook, yours forever</li>
+          <li>Private one-to-one session with our lead coach</li>
+          <li>Four skills stations: bunkers, approach, putting, short game</li>
+          <li>Premium training aids pack (value over £200)</li>
+          <li>90-day support programme with cohort WhatsApp group</li>
+          <li>Day 30 and Day 60 group check-ins</li>
+          <li>Completion certificate and graduation dinner</li>
+          <li>Verified handicap tracking via the World Handicap System</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     PACKAGES
+     ============================================ -->
+<section class="packages" id="packages">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Three Ways to Join</span>
+      <h2>Choose your stay. <em class="display-italic">We'll do the rest.</em></h2>
+      <p>The school itself is the same for every guest. Your accommodation is yours to choose.</p>
+    </div>
+
+    <div class="packages-grid">
+
+      <div class="package">
+        <div class="package-name">The Westin</div>
+        <div class="package-tag">Beachfront · Family-friendly luxury</div>
+        <div class="package-price"><span class="currency">€</span>4,995</div>
+        <div class="package-price-note">per guest · 4 nights · all-inclusive of school</div>
+        <div class="package-includes">
+          <h4>Your stay includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Four nights at The Westin Resort, deluxe garden room</li>
+            <li class="package-feature">Daily breakfast and lunch through school days</li>
+            <li class="package-feature">Graduation dinner on the Dunes terrace</li>
+            <li class="package-feature">All golf rounds and practice facilities</li>
+            <li class="package-feature">Access to Anazoe Spa and resort amenities</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Enquire</button>
+      </div>
+
+      <div class="package featured">
+        <div class="package-badge">Most Popular</div>
+        <div class="package-name">The Romanos <em>Luxury Collection</em></div>
+        <div class="package-tag">The signature experience</div>
+        <div class="package-price"><span class="currency">€</span>5,795</div>
+        <div class="package-price-note">per guest · 4 nights · all-inclusive of school</div>
+        <div class="package-includes">
+          <h4>Your stay includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Four nights at The Romanos, deluxe room with private terrace</li>
+            <li class="package-feature">Daily breakfast and lunch through school days</li>
+            <li class="package-feature">Private celebration dinner at Flame, paired wines included</li>
+            <li class="package-feature">All golf rounds and practice facilities</li>
+            <li class="package-feature">Anazoe Spa welcome treatment</li>
+            <li class="package-feature">Private resort transfer</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve</button>
+      </div>
+
+      <div class="package">
+        <div class="package-name">Mandarin Oriental</div>
+        <div class="package-tag">The most exclusive stay</div>
+        <div class="package-price"><span class="currency">€</span>7,495</div>
+        <div class="package-price-note">per guest · 4 nights · all-inclusive of school</div>
+        <div class="package-includes">
+          <h4>Your stay includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Four nights in a Mandarin Oriental villa with private pool</li>
+            <li class="package-feature">All meals through the programme, à la carte</li>
+            <li class="package-feature">Private dining graduation experience</li>
+            <li class="package-feature">All golf rounds and practice facilities</li>
+            <li class="package-feature">Two Anazoe Spa treatments of your choice</li>
+            <li class="package-feature">Private transfers and concierge throughout</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Enquire</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIAL
+     ============================================ -->
+<section class="testimonial">
+  <div class="container">
+    <p class="testimonial-quote">
+      I have had golf lessons for fifteen years. In one afternoon, they told me more about why I play the way I do than anyone has managed in a decade. Genuinely uncanny.
+    </p>
+    <p class="testimonial-attribution">— Profiling Pilot · Hampshire, UK</p>
+  </div>
+</section>
+
+<!-- ============================================
+     RESERVE
+     ============================================ -->
+<section class="reserve" id="reserve">
+  <div class="container">
+    <div class="reserve-grid">
+      <div>
+        <span class="eyebrow">2026 Schedule</span>
+        <h2>Eight places. Eight schools a year.</h2>
+        <p class="reserve-lede">
+          The first Navarino Golf School begins April 2026. Places are released to LLG members first, then to the wider community. We expect each cohort to fill within days.
+        </p>
+
+        <ul class="dates-list">
+          <li class="date-item">
+            <div class="date-info">
+              <div class="date-month">April</div>
+              <div class="date-range">12 — 15 April 2026</div>
+            </div>
+            <div class="date-status status-open">2 places left</div>
+          </li>
+          <li class="date-item">
+            <div class="date-info">
+              <div class="date-month">May</div>
+              <div class="date-range">17 — 20 May 2026</div>
+            </div>
+            <div class="date-status status-limited">4 places left</div>
+          </li>
+          <li class="date-item">
+            <div class="date-info">
+              <div class="date-month">June</div>
+              <div class="date-range">14 — 17 June 2026</div>
+            </div>
+            <div class="date-status status-open">6 places left</div>
+          </li>
+          <li class="date-item">
+            <div class="date-info">
+              <div class="date-month">September</div>
+              <div class="date-range">13 — 16 September 2026</div>
+            </div>
+            <div class="date-status status-open">8 places left</div>
+          </li>
+          <li class="date-item">
+            <div class="date-info">
+              <div class="date-month">October</div>
+              <div class="date-range">11 — 14 October 2026</div>
+            </div>
+            <div class="date-status status-waitlist">Waitlist</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reserve-form">
+        <h3>Register your interest</h3>
+        <p class="reserve-form-note">A member of the team will be in touch within 24 hours to talk through your preferred dates and stay.</p>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Mrs Jane Hamilton">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="jane@example.co.uk">
+        </div>
+        <div class="form-group">
+          <label for="hcp">Current Handicap</label>
+          <input type="text" id="hcp" placeholder="24">
+        </div>
+        <div class="form-group">
+          <label for="dates">Preferred Dates</label>
+          <select id="dates">
+            <option>April 2026</option>
+            <option>May 2026</option>
+            <option>June 2026</option>
+            <option>September 2026</option>
+            <option>I'm flexible</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="stay">Preferred Stay</label>
+          <select id="stay">
+            <option>The Westin</option>
+            <option>The Romanos, Luxury Collection</option>
+            <option>Mandarin Oriental</option>
+            <option>Help me choose</option>
+          </select>
+        </div>
+        <button class="form-btn" onclick="alert('In the live site this would submit to your CRM. Demo only.')">Send Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">The Navarino Golf School</div>
+        <div class="footer-brand-tagline">for Women</div>
+        <p>An exclusive partnership between Costa Navarino and Ladies Love Golf. Methodology, profiling and lead coaching by LLG. Hosted by Costa Navarino, Messinia, Greece.</p>
+      </div>
+      <div>
+        <h4>The School</h4>
+        <ul>
+          <li><a href="#school">The Experience</a></li>
+          <li><a href="#profiling">The Profiling</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#reserve">Reserve</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Costa Navarino</h4>
+        <ul>
+          <li><a href="#">The Resort</a></li>
+          <li><a href="#">The Four Courses</a></li>
+          <li><a href="#">Anazoe Spa</a></li>
+          <li><a href="#">Dining</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>schools@navarinogolf.com</li>
+          <li>+30 27230 90000</li>
+          <li>Messinia, Greece</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Costa Navarino · Methodology licensed from Ladies Love Golf Ltd</div>
+      <div>Privacy · Terms · Cookies</div>
+    </div>
+  </div>
+</footer>
+
+<div class="demo-banner">Demo Mockup · For Internal Review</div>
+
+</body>
+</html>

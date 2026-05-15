@@ -1,0 +1,102 @@
+# The Navarino Golf School — Marketing Site
+
+A working marketing site mockup for **The Navarino Golf School for Women**, a proposed exclusive partnership between **Costa Navarino** (Messinia, Greece) and **Ladies Love Golf**.
+
+This is the customer-facing site only. The operational system (questionnaire, profiling engine, workbook generation, coach dashboard) is a separate project.
+
+---
+
+## Purpose
+
+This site exists to:
+
+1. Demonstrate to Costa Navarino leadership how the partnership would look in market
+2. Sell the school to high-net-worth women golfers (age 45-65, handicap 18-36)
+3. Act as a working sales asset that can be iterated on rapidly
+
+It is **not** the live LLG website. LLG stays exactly as it is. This is a parallel, independent property.
+
+---
+
+## Brand & Co-Branding Rules
+
+- **Host brand:** Costa Navarino. Their name leads. The school is hosted by them.
+- **Methodology partner:** Ladies Love Golf. Credited as the IP and lead coaching provider — positioned the way "Mouratoglou Tennis Center" sits inside Costa Navarino.
+- **Tone:** Quiet luxury. Aman / Mandarin Oriental / Conde Nast Traveller. Never "ladies golf clichés", never pink, never marketing fluff.
+- **Language:** UK English throughout (colour, programme, organisation). No em dashes (Karla's house rule — avoids the AI tell).
+
+### Palette (in `:root`)
+
+| Variable     | Hex        | Use                          |
+|--------------|------------|------------------------------|
+| `--ink`      | `#1a2733`  | Headlines, deep ink          |
+| `--sea`      | `#2d4a5f`  | Ionian blue accents          |
+| `--sea-deep` | `#16344a`  | Dark feature backgrounds     |
+| `--sand`     | `#e8dfd1`  | Sandstone neutrals           |
+| `--sand-light`| `#f5efe5` | Warm cream sections          |
+| `--olive`    | `#7a8467`  | Kalamata olive (subtle text) |
+| `--gold`     | `#b08d57`  | Antique gold accents only    |
+| `--paper`    | `#fbf8f2`  | Main page background         |
+
+### Fonts
+
+- Display: **Cormorant Garamond** (serif, often italic for emphasis)
+- Body: **Inter** (light weights, generous letter-spacing on labels)
+
+---
+
+## Tech
+
+Pure HTML + CSS in a single `index.html` file. No build step. No framework. No dependencies beyond Google Fonts.
+
+This is deliberate — it means:
+
+- Anyone can edit it without installing anything
+- It will run forever, on anything
+- Deploys to Netlify in seconds
+
+---
+
+## Local Preview
+
+Just open `index.html` in any browser. Or run a tiny local server:
+
+```bash
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
+
+---
+
+## Deployment
+
+This repo deploys to Netlify automatically on every push to `main`.
+
+The `netlify.toml` file in the root tells Netlify how to publish (it just serves the root folder — no build needed).
+
+---
+
+## Project Status
+
+- ✅ Initial design and content
+- ⏳ Pricing to be finalised
+- ⏳ Real Costa Navarino imagery (currently using custom SVG illustrations to avoid licensing risk during demo phase)
+- ⏳ Real testimonials once first cohort runs
+- ⏳ Custom domain
+- ⏳ Connect form to CRM (currently shows a demo alert)
+
+---
+
+## Working With Claude Code
+
+When making changes, please:
+
+1. Preserve UK English spelling
+2. **No em dashes** — use commas, full stops, or rephrase
+3. Keep the co-branding hierarchy: Costa Navarino leads, LLG is credited as methodology
+4. Maintain the quiet luxury aesthetic — no neon, no pink, no stock-photo clichés
+5. Test mobile layout (the site is fully responsive — keep it that way)
+
+---
+
+© 2026 Costa Navarino · Methodology licensed from Ladies Love Golf Ltd
