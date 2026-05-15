@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Navarino Golf School for Women — Costa Navarino</title>
+<title>The Navarino Golf School for Women · Costa Navarino</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -296,34 +296,50 @@
     animation: fadeUp 1s ease 0.95s forwards;
   }
 
-  .hero-meta {
+  .hero-experiences {
     border-top: 1px solid rgba(251, 248, 242, 0.3);
     padding-top: 2rem;
     margin-top: 2rem;
     opacity: 0;
     animation: fadeUp 1s ease 1.15s forwards;
-  }
-
-  .hero-meta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
   }
 
-  .hero-meta-item .label {
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--sand-light);
-    opacity: 0.85;
-    margin-bottom: 0.4rem;
+  .hero-exp-item {
+    padding: 1.2rem 1.4rem;
+    background: rgba(251, 248, 242, 0.08);
+    backdrop-filter: blur(10px);
+    border-left: 2px solid var(--gold);
+    transition: all 0.4s;
   }
 
-  .hero-meta-item .value {
+  .hero-exp-item:hover {
+    background: rgba(251, 248, 242, 0.14);
+    transform: translateX(4px);
+  }
+
+  .hero-exp-label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-exp-title {
     font-family: var(--serif);
-    font-size: 1.6rem;
+    font-size: 1.05rem;
     color: var(--paper);
-    line-height: 1;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-exp-meta {
+    font-size: 0.72rem;
+    color: rgba(251, 248, 242, 0.75);
+    letter-spacing: 0.04em;
   }
 
   .hero-scroll {
@@ -396,7 +412,189 @@
   }
 
   /* =========================================================
-     THE SCHOOL — feature section
+     ONE DAY INTENSIVE
+     ========================================================= */
+  .one-day {
+    background: var(--paper);
+    position: relative;
+  }
+
+  .one-day-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    align-items: start;
+  }
+
+  @media (max-width: 900px) {
+    .one-day-grid { grid-template-columns: 1fr; }
+  }
+
+  .one-day-lede {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.45;
+    color: var(--ink);
+    margin: 1.5rem 0 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .one-day-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .flow-item {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: baseline;
+  }
+
+  .flow-item:last-child { border-bottom: none; }
+
+  @media (max-width: 700px) {
+    .flow-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  }
+
+  .flow-time {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.95rem;
+  }
+
+  .flow-detail {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  .one-day-card {
+    background: var(--ink);
+    color: var(--sand-light);
+    padding: 2.5rem;
+    position: sticky;
+    top: 6rem;
+  }
+
+  .one-day-card-inner h4 { color: var(--paper); }
+
+  .one-day-price-eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .one-day-price {
+    font-family: var(--serif);
+    font-size: 3.5rem;
+    color: var(--paper);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .one-day-price .currency {
+    font-size: 1.5rem;
+    vertical-align: top;
+    color: var(--gold);
+    margin-right: 4px;
+  }
+
+  .one-day-price-detail {
+    font-size: 0.85rem;
+    color: rgba(251, 248, 242, 0.7);
+    padding-bottom: 1.8rem;
+    margin-bottom: 1.8rem;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.15);
+  }
+
+  .one-day-includes h4 {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .one-day-includes ul {
+    list-style: none;
+    margin-bottom: 2rem;
+  }
+
+  .one-day-includes li {
+    padding: 0.55rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: rgba(251, 248, 242, 0.85);
+    display: flex;
+    gap: 0.7rem;
+  }
+
+  .one-day-includes li::before {
+    content: "·";
+    color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .one-day-cta {
+    width: 100%;
+    background: var(--gold);
+    color: var(--ink);
+    border: none;
+    padding: 1.1rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-family: var(--sans);
+    margin-bottom: 1.5rem;
+  }
+
+  .one-day-cta:hover { background: #c9a06a; }
+
+  .one-day-footnote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(251, 248, 242, 0.7);
+    line-height: 1.5;
+  }
+
+  .one-day-bridge {
+    margin-top: 5rem;
+    text-align: center;
+  }
+
+  .bridge-divider {
+    width: 1px;
+    height: 60px;
+    background: var(--gold);
+    margin: 0 auto 2rem;
+  }
+
+  .bridge-text {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--ink);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  /* =========================================================
+     THE SCHOOL
      ========================================================= */
   .school {
     background: var(--sand-light);
@@ -738,11 +936,148 @@
     background: var(--sand-light);
   }
 
+  .packages-row-oneday {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+  }
+
+  .package-oneday {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    padding: 3rem;
+    position: relative;
+  }
+
+  .package-tag-top {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--paper);
+    padding: 0.4rem 1rem;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    margin-bottom: 2rem;
+  }
+
+  .package-name-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .package-price-inline {
+    font-family: var(--serif);
+    font-size: 3rem;
+    color: var(--ink);
+    line-height: 1;
+    text-align: right;
+  }
+
+  .package-price-inline .currency {
+    font-size: 1.4rem;
+    vertical-align: top;
+    margin-right: 4px;
+    color: var(--gold);
+  }
+
+  .price-detail-inline {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: 0.3rem;
+  }
+
+  .package-features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .package-features-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+
+  .pf-col h4 {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .packages-three-day-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  .packages-three-day-head .eyebrow { margin-top: 2.5rem; }
+
+  .packages-three-day-head h3 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    margin: 1rem 0 1rem;
+  }
+
+  .packages-three-day-head p {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--ink-soft);
+    font-weight: 300;
+  }
+
+  .extend-stay {
+    margin-top: 4rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 2.5rem 3rem;
+  }
+
+  .extend-stay-inner {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  @media (max-width: 700px) {
+    .extend-stay-inner { grid-template-columns: 1fr; text-align: center; }
+    .extend-stay-art { margin: 0 auto; }
+  }
+
+  .extend-stay-art {
+    width: 80px;
+    height: 80px;
+  }
+
+  .extend-stay-content h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .extend-stay-content p {
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
   .packages-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 
   @media (max-width: 900px) {
@@ -851,7 +1186,7 @@
   }
 
   .package-feature::before {
-    content: "—";
+    content: "·";
     color: var(--gold);
     flex-shrink: 0;
   }
@@ -948,8 +1283,35 @@
     font-family: var(--serif);
     font-size: 1.2rem;
     color: rgba(251, 248, 242, 0.8);
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     line-height: 1.5;
+  }
+
+  .dates-subhead {
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: 500;
+  }
+
+  .dates-subhead:first-of-type { margin-top: 0; }
+
+  .oneday-availability {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(251, 248, 242, 0.15);
+  }
+
+  .oneday-avail-text {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: rgba(251, 248, 242, 0.75);
+    line-height: 1.55;
+    font-weight: 300;
   }
 
   .dates-list {
@@ -1158,13 +1520,13 @@
       </div>
       <div class="brand-divider"></div>
       <div class="brand-llg">
-        Methodology by<em>Ladies Love Golf</em>
+        Powered by<em>Ladies Love Golf</em>
       </div>
     </div>
     <div class="nav-links">
-      <a href="#school">The School</a>
+      <a href="#one-day">One Day</a>
+      <a href="#school">Three Day School</a>
       <a href="#profiling">The Profiling</a>
-      <a href="#packages">Packages</a>
       <a href="#reserve" class="nav-cta">Reserve</a>
     </div>
   </div>
@@ -1259,24 +1621,20 @@
             <span class="line">for Women.</span>
           </h1>
           <p class="hero-sub">
-            Three days on the Ionian coast. The world's only psychological profiling system for golf. A lower handicap, signed and sealed.
+            The world's only psychological profiling system for golf, set on the Ionian coast. Two ways to experience it. One unforgettable game.
           </p>
         </div>
         <div>
-          <div class="hero-meta">
-            <div class="hero-meta-grid">
-              <div class="hero-meta-item">
-                <div class="label">Cohort</div>
-                <div class="value">8 women</div>
-              </div>
-              <div class="hero-meta-item">
-                <div class="label">Duration</div>
-                <div class="value">3 days</div>
-              </div>
-              <div class="hero-meta-item">
-                <div class="label">Outcome</div>
-                <div class="value">−3 to −5 shots</div>
-              </div>
+          <div class="hero-experiences">
+            <div class="hero-exp-item">
+              <div class="hero-exp-label">One Day Intensive</div>
+              <div class="hero-exp-title">For guests already at the resort. A day that changes the way you play.</div>
+              <div class="hero-exp-meta">€1,495 · 8 women · daily availability</div>
+            </div>
+            <div class="hero-exp-item">
+              <div class="hero-exp-label">Three Day School</div>
+              <div class="hero-exp-title">Four nights at Costa Navarino. The full transformation, with 90 days of follow-on coaching.</div>
+              <div class="hero-exp-meta">From €5,495 · 8 women · monthly cohorts</div>
             </div>
           </div>
         </div>
@@ -1300,10 +1658,92 @@
       </h2>
       <div class="invitation-divider"></div>
       <p>
-        Held exclusively at Costa Navarino — host of four signature courses and named World's Best Golf Venue by the World Golf Awards — The Navarino Golf School is an intensive transformation programme designed for women who are serious about their game.
+        Held exclusively at Costa Navarino, host of four signature courses and named World's Best Golf Venue by the World Golf Awards. The Navarino Golf School is a programme designed for women who are serious about their game.
       </p>
       <p>
-        It is the only school of its kind in the world. Eight women. Three days. One signed commitment to play better golf, for the rest of your life.
+        It is the only school of its kind in the world. Eight women. Three days. A commitment to play better golf, for the rest of your life.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ONE DAY INTENSIVE
+     ============================================ -->
+<section class="one-day" id="one-day">
+  <div class="container">
+    <div class="one-day-grid">
+      <div class="one-day-content">
+        <span class="eyebrow">The One Day Intensive</span>
+        <h2>A single day. A different golfer by sundown.</h2>
+        <p class="one-day-lede">
+          For resort guests who are already at Costa Navarino, or arriving for the day. The same psychological profiling system, the same PGA coaches, compressed into one immersive day from breakfast to sunset.
+        </p>
+
+        <div class="one-day-flow">
+          <div class="flow-item">
+            <div class="flow-time">Before you arrive</div>
+            <div class="flow-detail">You complete your psychological profile online. By the time you walk through the door, we already know exactly how to coach you.</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-time">09:00 · Welcome</div>
+            <div class="flow-detail">Coffee on the terrace. Your profile is revealed in a personalised workbook designed for the day.</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-time">09:30 · Mental game & course management</div>
+            <div class="flow-detail">A masterclass shaped around your profile. Why you lose shots. What to do instead.</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-time">11:00 · Skills practice</div>
+            <div class="flow-detail">Targeted practice across short game, putting, and approach shots, with profile-aware coaching.</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-time">12:30 · Lunch with your coaches</div>
+            <div class="flow-detail">An intimate lunch where the real questions get answered.</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-time">13:30 · Nine holes on the course</div>
+            <div class="flow-detail">Real coaching, real shots, real decisions. Your coaches walk with you for all nine holes.</div>
+          </div>
+          <div class="flow-item">
+            <div class="flow-time">16:30 · Debrief & 30-day plan</div>
+            <div class="flow-detail">A personal plan you take home with you. Three things to work on. One profile to remember.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="one-day-card">
+        <div class="one-day-card-inner">
+          <div class="one-day-price-eyebrow">From</div>
+          <div class="one-day-price"><span class="currency">€</span>1,495</div>
+          <div class="one-day-price-detail">per guest, all inclusive</div>
+
+          <div class="one-day-includes">
+            <h4>Your day includes</h4>
+            <ul>
+              <li>Pre-arrival psychological profile, one of 49 unique combinations</li>
+              <li>Seven hours of intensive coaching with two PGA professionals</li>
+              <li>Personalised one-day workbook, yours to keep</li>
+              <li>Green fee, buggy, and on-course coaching for nine holes</li>
+              <li>Coffee on arrival, lunch with your coaches, post-round refreshments</li>
+              <li>A signed thirty-day plan you take home</li>
+              <li>Priority access to a Three Day School cohort</li>
+            </ul>
+          </div>
+
+          <button class="one-day-cta" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve a Day</button>
+
+          <div class="one-day-footnote">
+            Limited to eight women per day. Two days per week in season. Often booked weeks in advance by resort guests.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="one-day-bridge">
+      <div class="bridge-divider"></div>
+      <p class="bridge-text">
+        Many guests come for the day and leave determined to come back. The Three Day School is built for exactly that.
       </p>
     </div>
   </div>
@@ -1365,16 +1805,16 @@
       </div>
 
       <div class="school-content">
-        <span class="eyebrow">The School</span>
-        <h2>Tour-level coaching, designed for women.</h2>
+        <span class="eyebrow">The Three Day School</span>
+        <h2>The full transformation. Tour-level coaching for women.</h2>
         <p class="school-lede">
-          Every great golfer has a mental game coach. Now you do too — wrapped inside three days of personalised, intensive transformation at one of Europe's most exceptional resorts.
+          Four nights at Costa Navarino. Three days of intensive coaching. Ninety days of follow-on support. A handicap that drops, and stays dropped.
         </p>
         <p>
-          The school is built on a simple truth: most women don't need a better swing. They need to understand how their psychology shows up on the course, then receive a personal strategy to play their best golf consistently. We've spent over a decade coaching women, and we've identified 49 distinct psychological profiles — yours is one of them.
+          The school is built on a simple truth: most women do not need a better swing. They need to understand how their psychology shows up on the course, then receive a personal strategy to play their best golf consistently. Over a decade of coaching women has shown us 49 distinct psychological profiles, and yours is one of them.
         </p>
         <p>
-          From the moment you arrive, you are coached as an individual. Two PGA professionals. A printed workbook personalised to your profile. Skills stations that target where you actually lose shots. A signed 90-day commitment that takes your handicap down — and keeps it there.
+          From the moment you arrive, you are coached as an individual. Two PGA professionals. A printed workbook personalised to your profile. Skills stations that target where you actually lose shots. A private session with the lead coach. A signed 90-day commitment that takes your handicap down, and a cohort of women who hold you to it.
         </p>
       </div>
     </div>
@@ -1393,34 +1833,34 @@
 
     <div class="pillars-grid">
       <div class="pillar">
-        <div class="pillar-num">— I</div>
+        <div class="pillar-num">I</div>
         <h3>Eight women, no more</h3>
-        <p>A genuinely intimate cohort. Real attention from two coaches, real friendships formed, real accountability that lasts long after you leave.</p>
+        <p>Small enough that your coaches know your name, your game and your goals. Friendships formed here tend to stick.</p>
       </div>
       <div class="pillar">
-        <div class="pillar-num">— II</div>
+        <div class="pillar-num">II</div>
         <h3>Psychology first</h3>
         <p>The only psychological profiling system for golf in the world. Forty-nine profiles. We find yours before you arrive, then we coach to it.</p>
       </div>
       <div class="pillar">
-        <div class="pillar-num">— III</div>
+        <div class="pillar-num">III</div>
         <h3>Designed for women</h3>
         <p>Built from over a decade of female-only coaching. Encouraging, honest, never patronising. You will not be coached like a man with a smaller swing.</p>
       </div>
       <div class="pillar">
-        <div class="pillar-num">— IV</div>
+        <div class="pillar-num">IV</div>
         <h3>Measurable results</h3>
         <p>Most participants drop 3 to 5 shots in 90 days, tracked through the World Handicap System. The school is just the beginning.</p>
       </div>
       <div class="pillar">
-        <div class="pillar-num">— V</div>
+        <div class="pillar-num">V</div>
         <h3>One-to-one with the lead coach</h3>
-        <p>A private session with Karla, our co-founder, on Day 2. Your personal pattern, in your own words, with a tailored plan for the next 90 days.</p>
+        <p>A private session with our lead coach on Day 2. Your personal pattern, in your own words, with a tailored plan for the next 90 days.</p>
       </div>
       <div class="pillar">
-        <div class="pillar-num">— VI</div>
+        <div class="pillar-num">VI</div>
         <h3>The Costa Navarino setting</h3>
-        <p>Four signature courses. The Anazoe Spa. The Ionian Sea outside your window. The school is exceptional — and so is everything around it.</p>
+        <p>Four signature courses. The Anazoe Spa. The Ionian Sea outside your window. The school is exceptional, and so is everything around it.</p>
       </div>
     </div>
   </div>
@@ -1434,7 +1874,7 @@
     <span class="eyebrow">The Profiling System</span>
     <h2>Forty-nine ways of sabotaging a perfectly good round. One of them is yours.</h2>
     <p class="profiling-lede">
-      Before you arrive, you complete a 30-question profile. From your answers, we identify a primary and secondary psychological pattern — the way your mind tends to interfere with your golf. Every workbook, every coaching session, every piece of feedback is built around your specific combination.
+      Before you arrive, you complete a 30-question profile. From your answers, we identify a primary and secondary psychological pattern, the way your mind tends to interfere with your golf. Every workbook, every coaching session, every piece of feedback is built around your specific combination.
     </p>
 
     <div class="profile-cards">
@@ -1480,7 +1920,7 @@
       </div>
     </div>
 
-    <p class="profiling-note">+ 41 more. One of them is genuinely, uncannily yours.</p>
+    <p class="profiling-note">+ 41 more. One of them is yours.</p>
   </div>
 </section>
 
@@ -1511,7 +1951,7 @@
             <span class="label">Systems & Skills</span>
           </div>
           <h3>You learn where you actually lose shots</h3>
-          <p>A custom scorecard built around you. Short game decoded. Skills stations targeting bunkers, approach, putting and short game — each one coached to your profile. A 15-minute one-to-one with our lead coach. Six holes putting it all together.</p>
+          <p>A custom scorecard built around you. Short game decoded. Skills stations targeting bunkers, approach, putting and short game, each one coached to your profile. A 15-minute one-to-one with our lead coach. Six holes putting it all together.</p>
         </div>
 
         <div class="day-card">
@@ -1549,18 +1989,61 @@
 <section class="packages" id="packages">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Three Ways to Join</span>
-      <h2>Choose your stay. <em class="display-italic">We'll do the rest.</em></h2>
-      <p>The school itself is the same for every guest. Your accommodation is yours to choose.</p>
+      <span class="eyebrow">Choose Your Experience</span>
+      <h2>One day, or three. <em class="display-italic">The choice is yours.</em></h2>
+      <p>The One Day Intensive is a single fee, all inclusive. The Three Day School is offered across three accommodation tiers, with everything included from arrival to departure.</p>
+    </div>
+
+    <div class="packages-row-oneday">
+      <div class="package package-oneday">
+        <div class="package-tag-top">For resort guests</div>
+        <div class="package-name-row">
+          <div>
+            <div class="package-name">One Day Intensive</div>
+            <div class="package-tag">A complete day, profile to plan</div>
+          </div>
+          <div class="package-price-inline">
+            <span class="currency">€</span>1,495
+            <div class="price-detail-inline">per guest</div>
+          </div>
+        </div>
+        <div class="package-features-grid">
+          <div class="pf-col">
+            <h4>Coaching & profiling</h4>
+            <ul class="package-features">
+              <li class="package-feature">Pre-arrival psychological profile</li>
+              <li class="package-feature">Seven hours, two PGA professionals</li>
+              <li class="package-feature">Personalised one-day workbook</li>
+              <li class="package-feature">Signed thirty-day plan</li>
+            </ul>
+          </div>
+          <div class="pf-col">
+            <h4>On the day</h4>
+            <ul class="package-features">
+              <li class="package-feature">Green fee and buggy</li>
+              <li class="package-feature">Nine holes on-course coaching</li>
+              <li class="package-feature">Lunch with your coaches</li>
+              <li class="package-feature">Priority access to a Three Day School</li>
+            </ul>
+          </div>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve a Day</button>
+      </div>
+    </div>
+
+    <div class="packages-three-day-head">
+      <span class="eyebrow">The Three Day School</span>
+      <h3>Four nights at Costa Navarino. Everything included.</h3>
+      <p>Three accommodation tiers. The same school, the same coaching, the same transformation. Choose how you wish to live while you are with us.</p>
     </div>
 
     <div class="packages-grid">
 
       <div class="package">
         <div class="package-name">The Westin</div>
-        <div class="package-tag">Beachfront · Family-friendly luxury</div>
-        <div class="package-price"><span class="currency">€</span>4,995</div>
-        <div class="package-price-note">per guest · 4 nights · all-inclusive of school</div>
+        <div class="package-tag">Beachfront, family-friendly luxury</div>
+        <div class="package-price"><span class="currency">€</span>5,495</div>
+        <div class="package-price-note">per guest · 4 nights · all inclusive</div>
         <div class="package-includes">
           <h4>Your stay includes</h4>
           <ul class="package-features">
@@ -1578,8 +2061,8 @@
         <div class="package-badge">Most Popular</div>
         <div class="package-name">The Romanos <em>Luxury Collection</em></div>
         <div class="package-tag">The signature experience</div>
-        <div class="package-price"><span class="currency">€</span>5,795</div>
-        <div class="package-price-note">per guest · 4 nights · all-inclusive of school</div>
+        <div class="package-price"><span class="currency">€</span>6,495</div>
+        <div class="package-price-note">per guest · 4 nights · all inclusive</div>
         <div class="package-includes">
           <h4>Your stay includes</h4>
           <ul class="package-features">
@@ -1597,8 +2080,8 @@
       <div class="package">
         <div class="package-name">Mandarin Oriental</div>
         <div class="package-tag">The most exclusive stay</div>
-        <div class="package-price"><span class="currency">€</span>7,495</div>
-        <div class="package-price-note">per guest · 4 nights · all-inclusive of school</div>
+        <div class="package-price"><span class="currency">€</span>8,995</div>
+        <div class="package-price-note">per guest · 4 nights · all inclusive</div>
         <div class="package-includes">
           <h4>Your stay includes</h4>
           <ul class="package-features">
@@ -1614,6 +2097,22 @@
       </div>
 
     </div>
+
+    <div class="extend-stay">
+      <div class="extend-stay-inner">
+        <div class="extend-stay-art">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="#b08d57" stroke-width="0.8"/>
+            <path d="M30 14 L30 30 L40 36" fill="none" stroke="#b08d57" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="extend-stay-content">
+          <h3>Extend your stay</h3>
+          <p>The school is the start. Many guests arrive a few days early to adjust, or stay on afterwards with partners and family to enjoy Costa Navarino at leisure. Tell us what you have in mind and we will arrange directly with the resort.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1623,9 +2122,9 @@
 <section class="testimonial">
   <div class="container">
     <p class="testimonial-quote">
-      I have had golf lessons for fifteen years. In one afternoon, they told me more about why I play the way I do than anyone has managed in a decade. Genuinely uncanny.
+      I have had golf lessons for fifteen years. In one afternoon, they told me more about why I play the way I do than anyone has managed in a decade.
     </p>
-    <p class="testimonial-attribution">— Profiling Pilot · Hampshire, UK</p>
+    <p class="testimonial-attribution">Profiling Pilot · Hampshire, UK</p>
   </div>
 </section>
 
@@ -1637,54 +2136,68 @@
     <div class="reserve-grid">
       <div>
         <span class="eyebrow">2026 Schedule</span>
-        <h2>Eight places. Eight schools a year.</h2>
+        <h2>One Day Intensives. Three Day Schools.</h2>
         <p class="reserve-lede">
-          The first Navarino Golf School begins April 2026. Places are released to LLG members first, then to the wider community. We expect each cohort to fill within days.
+          One Day Intensives run twice a week in season, by reservation. Three Day Schools begin April 2026, with eight places per cohort. Both fill quickly. Register your interest below and we will be in touch.
         </p>
 
+        <h4 class="dates-subhead">Three Day School Cohorts</h4>
         <ul class="dates-list">
           <li class="date-item">
             <div class="date-info">
               <div class="date-month">April</div>
-              <div class="date-range">12 — 15 April 2026</div>
+              <div class="date-range">12 to 15 April 2026</div>
             </div>
             <div class="date-status status-open">2 places left</div>
           </li>
           <li class="date-item">
             <div class="date-info">
               <div class="date-month">May</div>
-              <div class="date-range">17 — 20 May 2026</div>
+              <div class="date-range">17 to 20 May 2026</div>
             </div>
             <div class="date-status status-limited">4 places left</div>
           </li>
           <li class="date-item">
             <div class="date-info">
               <div class="date-month">June</div>
-              <div class="date-range">14 — 17 June 2026</div>
+              <div class="date-range">14 to 17 June 2026</div>
             </div>
             <div class="date-status status-open">6 places left</div>
           </li>
           <li class="date-item">
             <div class="date-info">
               <div class="date-month">September</div>
-              <div class="date-range">13 — 16 September 2026</div>
+              <div class="date-range">13 to 16 September 2026</div>
             </div>
             <div class="date-status status-open">8 places left</div>
           </li>
           <li class="date-item">
             <div class="date-info">
               <div class="date-month">October</div>
-              <div class="date-range">11 — 14 October 2026</div>
+              <div class="date-range">11 to 14 October 2026</div>
             </div>
             <div class="date-status status-waitlist">Waitlist</div>
           </li>
         </ul>
+
+        <div class="oneday-availability">
+          <h4 class="dates-subhead">One Day Intensives</h4>
+          <p class="oneday-avail-text">Tuesdays and Thursdays, April through October. Maximum eight guests per day. Available by reservation, often booked weeks ahead.</p>
+        </div>
       </div>
 
       <div class="reserve-form">
         <h3>Register your interest</h3>
-        <p class="reserve-form-note">A member of the team will be in touch within 24 hours to talk through your preferred dates and stay.</p>
+        <p class="reserve-form-note">A member of the team will be in touch within 24 hours to talk through your preferred dates and experience.</p>
 
+        <div class="form-group">
+          <label for="experience">Which experience interests you?</label>
+          <select id="experience">
+            <option>One Day Intensive (€1,495)</option>
+            <option>Three Day School (from €5,495)</option>
+            <option>Both, I'd like to know more</option>
+          </select>
+        </div>
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" placeholder="Mrs Jane Hamilton">
@@ -1708,8 +2221,9 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="stay">Preferred Stay</label>
+          <label for="stay">Preferred Stay (Three Day School only)</label>
           <select id="stay">
+            <option>Not applicable, I'm booking the One Day</option>
             <option>The Westin</option>
             <option>The Romanos, Luxury Collection</option>
             <option>Mandarin Oriental</option>
@@ -1731,12 +2245,13 @@
       <div>
         <div class="footer-brand-name">The Navarino Golf School</div>
         <div class="footer-brand-tagline">for Women</div>
-        <p>An exclusive partnership between Costa Navarino and Ladies Love Golf. Methodology, profiling and lead coaching by LLG. Hosted by Costa Navarino, Messinia, Greece.</p>
+        <p>An exclusive partnership between Costa Navarino and Ladies Love Golf, the leading women's golf community. Profiling, coaching and programme design by LLG. Hosted by Costa Navarino, Messinia, Greece.</p>
       </div>
       <div>
         <h4>The School</h4>
         <ul>
-          <li><a href="#school">The Experience</a></li>
+          <li><a href="#one-day">One Day Intensive</a></li>
+          <li><a href="#school">Three Day School</a></li>
           <li><a href="#profiling">The Profiling</a></li>
           <li><a href="#packages">Packages</a></li>
           <li><a href="#reserve">Reserve</a></li>
@@ -1761,7 +2276,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div>© 2026 Costa Navarino · Methodology licensed from Ladies Love Golf Ltd</div>
+      <div>© 2026 Costa Navarino · Programme by Ladies Love Golf Ltd</div>
       <div>Privacy · Terms · Cookies</div>
     </div>
   </div>
