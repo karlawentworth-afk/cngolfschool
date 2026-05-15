@@ -214,8 +214,8 @@
     display: flex;
     align-items: center;
     background:
-      linear-gradient(180deg, rgba(251,248,242,0.4) 0%, rgba(251,248,242,0) 30%, rgba(251,248,242,0.7) 100%),
-      linear-gradient(135deg, #c8d4dc 0%, #a8bcc8 40%, #7a96a5 100%);
+      linear-gradient(180deg, rgba(251,248,242,0.3) 0%, rgba(251,248,242,0) 30%, rgba(251,248,242,0.5) 100%),
+      linear-gradient(135deg, #5a7c8e 0%, #3a6070 40%, #2a4a5e 100%);
   }
 
   /* Stylised coastline SVG backdrop */
@@ -231,6 +231,17 @@
     width: 100%;
     height: 100%;
     bottom: 0;
+  }
+
+  .hero-art::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(90deg, rgba(22, 52, 74, 0.45) 0%, rgba(22, 52, 74, 0) 60%),
+      linear-gradient(180deg, transparent 50%, rgba(22, 52, 74, 0.35) 100%);
+    pointer-events: none;
   }
 
   .hero-grain {
@@ -261,7 +272,7 @@
 
   .hero h1 {
     color: var(--paper);
-    text-shadow: 0 2px 30px rgba(22, 52, 74, 0.25);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.3);
     margin-bottom: 2rem;
   }
 
@@ -294,6 +305,7 @@
     max-width: 480px;
     opacity: 0;
     animation: fadeUp 1s ease 0.95s forwards;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   }
 
   .hero-experiences {
@@ -309,8 +321,8 @@
 
   .hero-exp-item {
     padding: 1.2rem 1.4rem;
-    background: rgba(251, 248, 242, 0.08);
-    backdrop-filter: blur(10px);
+    background: rgba(22, 52, 74, 0.45);
+    backdrop-filter: blur(12px);
     border-left: 2px solid var(--gold);
     transition: all 0.4s;
   }
@@ -1542,7 +1554,7 @@
       <!-- Sun glow -->
       <defs>
         <radialGradient id="sunglow" cx="78%" cy="22%" r="35%">
-          <stop offset="0%" stop-color="#f5e6c8" stop-opacity="0.6"/>
+          <stop offset="0%" stop-color="#f5e6c8" stop-opacity="0.35"/>
           <stop offset="100%" stop-color="#f5e6c8" stop-opacity="0"/>
         </radialGradient>
         <linearGradient id="hills" x1="0" y1="0" x2="0" y2="1">
