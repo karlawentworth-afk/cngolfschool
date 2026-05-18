@@ -8,12 +8,12 @@ Single-file HTML site (`index.html`). No build step. Deploys to Netlify on push 
 
 ## The two products
 
-**One Day Intensive** at €1,495 per guest. For resort guests. Pre-arrival profile, then a full day of coaching, lunch, 9 holes on course, 30-day plan. Funnel product.
+**One Day Intensive** at £1,495 per guest. For resort guests. Pre-arrival profile, then a full day of coaching, lunch, 9 holes on course, 30-day plan. Funnel product.
 
-**Three Day School** from €5,495 per guest, three accommodation tiers:
-- The Westin: €5,495
-- The Romanos (featured/most popular): €6,495
-- Mandarin Oriental: €8,995
+**Three Day School** from £5,495 per guest, three accommodation tiers:
+- The Westin: £5,495
+- The Romanos (featured/most popular): £6,495
+- Mandarin Oriental: £8,995
 
 Both products allow guests to extend their stay at the resort.
 
