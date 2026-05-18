@@ -18,17 +18,33 @@ It is **not** the live LLG website. LLG stays exactly as it is. This is a parall
 
 ---
 
-## The Two Products
+## The Two Products (Hotel-as-Stage Model)
 
-**One Day Intensive · €1,495 per guest**
+Both products are delivered across four hotels at Costa Navarino. The school, coaches, and methodology are identical at every property. Pricing reflects the hotel, not the school.
 
-For resort guests already at Costa Navarino, or arriving for the day. A single day from breakfast to sunset. Pre-arrival psychological profile completed online. Includes coaching, green fee, lunch, mini-workbook, and a thirty-day plan. Eight guests maximum per day. Runs twice weekly in season (Tue/Thu).
+**One Day Intensive**
+
+For resort guests already at Costa Navarino, or arriving for the day. A single day from breakfast to sunset. Pre-arrival psychological profile completed online. Includes coaching, green fee, lunch, workbook, and a thirty-day plan. Twelve guests maximum per day.
+
+| Hotel | Price |
+|-------|-------|
+| The W Costa Navarino | €1,495 |
+| The Westin | €1,795 |
+| The Romanos, Luxury Collection (featured) | €2,195 |
+| Mandarin Oriental | €2,795 |
 
 This is the funnel. Lower commitment, premium experience, natural lead into the Three Day School.
 
-**Three Day School · from €5,495 per guest**
+**Three Day School (4 nights all-inclusive)**
 
-For guests coming to Costa Navarino specifically for the school. Four nights all-inclusive across three accommodation tiers (Westin €5,495 / Romanos €6,495 / Mandarin Oriental €8,995). Full programme: pre-arrival profile, three days intensive coaching, one-to-one session, four skills stations, graduation dinner, ninety-day follow-on programme with cohort WhatsApp group.
+For guests coming to Costa Navarino specifically for the school. Full programme: pre-arrival profile, three days intensive coaching, one-to-one session, four skills stations, graduation dinner, ninety-day follow-on programme with cohort WhatsApp group.
+
+| Hotel | Price |
+|-------|-------|
+| The W Costa Navarino | €4,995 |
+| The Westin | €5,495 |
+| The Romanos, Luxury Collection (featured) | €6,495 |
+| Mandarin Oriental | €10,495 |
 
 This is where transformation happens. Higher price, deeper outcome, longer relationship.
 
@@ -98,7 +114,7 @@ The `netlify.toml` file in the root tells Netlify how to publish (it just serves
 
 - ✅ Initial design and content
 - ✅ Two product offerings (One Day Intensive + Three Day School)
-- ✅ Pricing finalised: One Day €1,495 | Three Day from €5,495
+- ✅ Pricing: four-tier hotel-as-stage model (One Day from €1,495 | Three Day from €4,995)
 - ✅ Extend Your Stay messaging
 - ⏳ Real Costa Navarino imagery (currently using custom SVG illustrations to avoid licensing risk during demo phase)
 - ⏳ Real testimonials once first cohort runs

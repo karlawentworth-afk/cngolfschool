@@ -1087,19 +1087,23 @@
 
   .packages-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
+    .packages-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 700px) {
     .packages-grid { grid-template-columns: 1fr; }
   }
 
   .package {
     background: var(--paper);
     border: 1px solid var(--line);
-    padding: 2.5rem 2rem;
+    padding: 2rem 1.5rem;
     position: relative;
     transition: all 0.4s;
   }
@@ -1149,7 +1153,7 @@
 
   .package-price {
     font-family: var(--serif);
-    font-size: 2.6rem;
+    font-size: 2rem;
     color: var(--ink);
     line-height: 1;
     margin-bottom: 0.3rem;
@@ -1499,6 +1503,125 @@
   }
 
   /* =========================================================
+     ONE DAY HOTEL CARDS (sticky sidebar)
+     ========================================================= */
+  .one-day-hotels {
+    position: sticky;
+    top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .one-day-hotel-card {
+    background: var(--ink);
+    color: var(--sand-light);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-left: 3px solid transparent;
+    transition: all 0.3s;
+  }
+
+  .one-day-hotel-card:hover {
+    background: var(--sea-deep);
+  }
+
+  .one-day-hotel-card.featured {
+    border-left-color: var(--gold);
+    background: var(--sea-deep);
+  }
+
+  .one-day-hotel-name {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--paper);
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+  }
+
+  .one-day-hotel-tag {
+    font-size: 0.68rem;
+    color: rgba(251, 248, 242, 0.55);
+    letter-spacing: 0.02em;
+  }
+
+  .one-day-hotel-price {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    color: var(--paper);
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .one-day-hotel-price .currency {
+    font-size: 0.8rem;
+    vertical-align: top;
+    color: var(--gold);
+    margin-right: 2px;
+  }
+
+  .one-day-hotels-footnote {
+    margin-top: 0.5rem;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  /* =========================================================
+     HOTEL STAGE SECTION
+     ========================================================= */
+  .hotel-stage {
+    background: var(--paper);
+    text-align: center;
+  }
+
+  .hotel-stage-content {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .hotel-stage h2 {
+    font-size: clamp(1.7rem, 3.2vw, 2.6rem);
+    line-height: 1.35;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+
+  .hotel-stage p {
+    max-width: 720px;
+    margin: 0 auto 1.5rem;
+    font-size: 1.05rem;
+  }
+
+  .hotel-stage .invitation-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+  }
+
+  /* =========================================================
+     PACKAGES SECTION HEAD (for one-day within packages)
+     ========================================================= */
+  .packages-section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 2rem;
+  }
+
+  .packages-section-head .eyebrow { margin-bottom: 1rem; }
+
+  .packages-section-head h3 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    margin: 0;
+  }
+
+  /* =========================================================
      DEMO BANNER
      ========================================================= */
   .demo-banner {
@@ -1641,12 +1764,12 @@
             <div class="hero-exp-item">
               <div class="hero-exp-label">One Day Intensive</div>
               <div class="hero-exp-title">For guests already at the resort. A day that changes the way you play.</div>
-              <div class="hero-exp-meta">£1,495 · 12 women · daily availability</div>
+              <div class="hero-exp-meta">From €1,495 · 8 women · daily availability</div>
             </div>
             <div class="hero-exp-item">
               <div class="hero-exp-label">Three Day School</div>
               <div class="hero-exp-title">Four nights at Costa Navarino. The full transformation, with 90 days of follow-on coaching.</div>
-              <div class="hero-exp-meta">From £5,495 · 8 women · monthly cohorts</div>
+              <div class="hero-exp-meta">From €4,995 · 8 women · monthly cohorts</div>
             </div>
           </div>
         </div>
@@ -1689,7 +1812,7 @@
         <span class="eyebrow">The One Day Intensive</span>
         <h2>A single day. A different golfer by sundown.</h2>
         <p class="one-day-lede">
-          For resort guests who are already at Costa Navarino, or arriving for the day. The same psychological profiling system, the same PGA coaches, compressed into one immersive day from breakfast to sunset.
+          For resort guests who are already at Costa Navarino, or arriving for the day. The same psychological profiling system, the same PGA coaches, compressed into one immersive day from breakfast to sunset. Delivered at the hotel of your choice, with pricing reflecting each property's setting.
         </p>
 
         <div class="one-day-flow">
@@ -1724,30 +1847,40 @@
         </div>
       </div>
 
-      <div class="one-day-card">
-        <div class="one-day-card-inner">
-          <div class="one-day-price-eyebrow">From</div>
-          <div class="one-day-price"><span class="currency">£</span>1,495</div>
-          <div class="one-day-price-detail">per guest, all inclusive</div>
-
-          <div class="one-day-includes">
-            <h4>Your day includes</h4>
-            <ul>
-              <li>Pre-arrival psychological profile, one of 49 unique combinations</li>
-              <li>Seven hours of intensive coaching with two PGA professionals</li>
-              <li>Personalised one-day workbook, yours to keep</li>
-              <li>Green fee, buggy, and on-course coaching for nine holes</li>
-              <li>Coffee on arrival, lunch with your coaches, post-round refreshments</li>
-              <li>A signed thirty-day plan you take home</li>
-              <li>Priority access to a Three Day School cohort</li>
-            </ul>
+      <div class="one-day-hotels">
+        <div class="one-day-hotel-card">
+          <div>
+            <div class="one-day-hotel-name">The W Costa Navarino</div>
+            <div class="one-day-hotel-tag">Adult only, design-led</div>
           </div>
-
-          <button class="one-day-cta" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve a Day</button>
-
-          <div class="one-day-footnote">
-            Limited to twelve women per day. Two days per week in season. Often booked weeks in advance by resort guests.
+          <div class="one-day-hotel-price"><span class="currency">€</span>1,495</div>
+        </div>
+        <div class="one-day-hotel-card">
+          <div>
+            <div class="one-day-hotel-name">The Westin</div>
+            <div class="one-day-hotel-tag">Beachfront, family-friendly luxury</div>
           </div>
+          <div class="one-day-hotel-price"><span class="currency">€</span>1,795</div>
+        </div>
+        <div class="one-day-hotel-card featured">
+          <div>
+            <div class="one-day-hotel-name">The Romanos</div>
+            <div class="one-day-hotel-tag">The signature experience</div>
+          </div>
+          <div class="one-day-hotel-price"><span class="currency">€</span>2,195</div>
+        </div>
+        <div class="one-day-hotel-card">
+          <div>
+            <div class="one-day-hotel-name">Mandarin Oriental</div>
+            <div class="one-day-hotel-tag">Villa, ultra-premium</div>
+          </div>
+          <div class="one-day-hotel-price"><span class="currency">€</span>2,795</div>
+        </div>
+
+        <button class="one-day-cta" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve a Day</button>
+
+        <div class="one-day-hotels-footnote">
+          Limited to twelve women per day. Two days per week in season. Often booked weeks in advance by resort guests.
         </div>
       </div>
     </div>
@@ -1756,6 +1889,25 @@
       <div class="bridge-divider"></div>
       <p class="bridge-text">
         Many guests come for the day and leave determined to come back. The Three Day School is built for exactly that.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     THE HOTEL IS YOUR STAGE
+     ============================================ -->
+<section class="hotel-stage">
+  <div class="container">
+    <div class="hotel-stage-content">
+      <span class="eyebrow">The Same School, Four Settings</span>
+      <h2>The Hotel Is Your Stage</h2>
+      <div class="invitation-divider"></div>
+      <p>
+        Costa Navarino is a destination of four distinct hotels, each with its own personality and clientele. Rather than choose one, we deliver The Navarino Golf School across all four. Your hotel becomes the backdrop. Your fellow guests become your cohort. The content, the coaches, and the methodology stay identical at every property.
+      </p>
+      <p>
+        What changes is the wrapper. Where you take your welcome coffee. Where lunch is served. Which spa you retreat to between sessions. The pricing reflects the hotel, not the school. Every guest receives the same transformation, the same workbook, and the same PGA professionals who pioneered psychological profiling in golf.
       </p>
     </div>
   </div>
@@ -1982,7 +2134,7 @@
           <li>Pre-arrival psychological profile, one of 49 unique combinations</li>
           <li>Three days of intensive coaching with two PGA professionals and a qualified classroom facilitator</li>
           <li>Personalised printed workbook, yours forever</li>
-          <li>Premium training aids pack (value £350)</li>
+          <li>Premium training aids pack (value €350)</li>
           <li>90-day support programme with cohort WhatsApp group</li>
           <li>Day 30 and Day 60 group check-ins</li>
           <li>Completion certificate and graduation dinner</li>
@@ -2001,58 +2153,136 @@
     <div class="section-head">
       <span class="eyebrow">Choose Your Experience</span>
       <h2>One day, or three. <em class="display-italic">The choice is yours.</em></h2>
-      <p>The One Day Intensive is a single fee, all inclusive. The Three Day School is offered across three accommodation tiers, with everything included from arrival to departure.</p>
+      <p>Both experiences are offered across four hotels at Costa Navarino. The school, the coaches, and the methodology are identical at every property. The pricing reflects the hotel.</p>
     </div>
 
-    <div class="packages-row-oneday">
-      <div class="package package-oneday">
-        <div class="package-tag-top">For resort guests</div>
-        <div class="package-name-row">
-          <div>
-            <div class="package-name">One Day Intensive</div>
-            <div class="package-tag">A complete day, profile to plan</div>
-          </div>
-          <div class="package-price-inline">
-            <span class="currency">£</span>1,495
-            <div class="price-detail-inline">per guest</div>
-          </div>
-        </div>
-        <div class="package-features-grid">
-          <div class="pf-col">
-            <h4>Coaching & profiling</h4>
-            <ul class="package-features">
-              <li class="package-feature">Pre-arrival psychological profile</li>
-              <li class="package-feature">Seven hours, two PGA professionals</li>
-              <li class="package-feature">Personalised one-day workbook</li>
-              <li class="package-feature">Signed thirty-day plan</li>
-            </ul>
-          </div>
-          <div class="pf-col">
-            <h4>On the day</h4>
-            <ul class="package-features">
-              <li class="package-feature">Green fee and buggy</li>
-              <li class="package-feature">Nine holes on-course coaching</li>
-              <li class="package-feature">Lunch with your coaches</li>
-              <li class="package-feature">Priority access to a Three Day School</li>
-            </ul>
-          </div>
-        </div>
-        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve a Day</button>
-      </div>
-    </div>
-
-    <div class="packages-three-day-head">
-      <span class="eyebrow">The Three Day School</span>
-      <h3>Four nights at Costa Navarino. Everything included.</h3>
-      <p>Three accommodation tiers. The same school, the same coaching, the same transformation. Choose how you wish to live while you are with us.</p>
+    <!-- Section A: One Day Intensive -->
+    <div class="packages-section-head">
+      <span class="eyebrow">One Day Intensive</span>
+      <h3>Choose your hotel, choose your day</h3>
     </div>
 
     <div class="packages-grid">
 
       <div class="package">
+        <div class="package-name">The W Costa Navarino</div>
+        <div class="package-tag">Adult only, design-led</div>
+        <div class="package-price"><span class="currency">€</span>1,495</div>
+        <div class="package-price-note">per guest · all inclusive</div>
+        <div class="package-includes">
+          <h4>Your day includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Pre-arrival psychological profile</li>
+            <li class="package-feature">Seven hours, two PGA professionals and our lead coach</li>
+            <li class="package-feature">Personalised one-day workbook</li>
+            <li class="package-feature">Green fee and buggy</li>
+            <li class="package-feature">Nine holes on-course coaching</li>
+            <li class="package-feature">Lunch with your coaches at the hotel</li>
+            <li class="package-feature">Signed thirty-day plan</li>
+            <li class="package-feature">Priority access to a Three Day School</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Enquire</button>
+      </div>
+
+      <div class="package">
         <div class="package-name">The Westin</div>
         <div class="package-tag">Beachfront, family-friendly luxury</div>
-        <div class="package-price"><span class="currency">£</span>5,495</div>
+        <div class="package-price"><span class="currency">€</span>1,795</div>
+        <div class="package-price-note">per guest · all inclusive</div>
+        <div class="package-includes">
+          <h4>Your day includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Pre-arrival psychological profile</li>
+            <li class="package-feature">Seven hours, two PGA professionals and our lead coach</li>
+            <li class="package-feature">Personalised one-day workbook</li>
+            <li class="package-feature">Green fee and buggy</li>
+            <li class="package-feature">Nine holes on-course coaching</li>
+            <li class="package-feature">Lunch with your coaches at the hotel</li>
+            <li class="package-feature">Signed thirty-day plan</li>
+            <li class="package-feature">Priority access to a Three Day School</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Enquire</button>
+      </div>
+
+      <div class="package featured">
+        <div class="package-badge">Most popular at €2,195</div>
+        <div class="package-name">The Romanos <em>Luxury Collection</em></div>
+        <div class="package-tag">The signature experience</div>
+        <div class="package-price"><span class="currency">€</span>2,195</div>
+        <div class="package-price-note">per guest · all inclusive</div>
+        <div class="package-includes">
+          <h4>Your day includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Pre-arrival psychological profile</li>
+            <li class="package-feature">Seven hours, two PGA professionals and our lead coach</li>
+            <li class="package-feature">Personalised one-day workbook</li>
+            <li class="package-feature">Green fee and buggy</li>
+            <li class="package-feature">Nine holes on-course coaching</li>
+            <li class="package-feature">Lunch with your coaches at the hotel</li>
+            <li class="package-feature">Signed thirty-day plan</li>
+            <li class="package-feature">Priority access to a Three Day School</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Reserve</button>
+      </div>
+
+      <div class="package">
+        <div class="package-name">Mandarin Oriental</div>
+        <div class="package-tag">Villa, ultra-premium</div>
+        <div class="package-price"><span class="currency">€</span>2,795</div>
+        <div class="package-price-note">per guest · all inclusive</div>
+        <div class="package-includes">
+          <h4>Your day includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Pre-arrival psychological profile</li>
+            <li class="package-feature">Seven hours, two PGA professionals and our lead coach</li>
+            <li class="package-feature">Personalised one-day workbook</li>
+            <li class="package-feature">Green fee and buggy</li>
+            <li class="package-feature">Nine holes on-course coaching</li>
+            <li class="package-feature">Lunch with your coaches at the hotel</li>
+            <li class="package-feature">Signed thirty-day plan</li>
+            <li class="package-feature">Priority access to a Three Day School</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Enquire</button>
+      </div>
+
+    </div>
+
+    <!-- Section B: Three Day School -->
+    <div class="packages-three-day-head">
+      <span class="eyebrow">The Three Day School</span>
+      <h3>Four nights at Costa Navarino. Everything included.</h3>
+      <p>Four hotels, the same school, the same coaching, the same transformation. Choose how you wish to live while you are with us.</p>
+    </div>
+
+    <div class="packages-grid">
+
+      <div class="package">
+        <div class="package-name">The W Costa Navarino</div>
+        <div class="package-tag">Adult only, design-led</div>
+        <div class="package-price"><span class="currency">€</span>4,995</div>
+        <div class="package-price-note">per guest · 4 nights · all inclusive</div>
+        <div class="package-includes">
+          <h4>Your stay includes</h4>
+          <ul class="package-features">
+            <li class="package-feature">Four nights at The W Costa Navarino, beachfront sea view room</li>
+            <li class="package-feature">Daily breakfast and dinner across the dine-around programme</li>
+            <li class="package-feature">Graduation dinner at Parelia beach club</li>
+            <li class="package-feature">All golf rounds and practice facilities</li>
+            <li class="package-feature">Access to AWAY Spa and resort amenities</li>
+            <li class="package-feature">Adult-only environment</li>
+          </ul>
+        </div>
+        <button class="package-btn" onclick="document.getElementById('reserve').scrollIntoView({behavior:'smooth'})">Enquire</button>
+      </div>
+
+      <div class="package">
+        <div class="package-name">The Westin</div>
+        <div class="package-tag">Beachfront, family-friendly luxury</div>
+        <div class="package-price"><span class="currency">€</span>5,495</div>
         <div class="package-price-note">per guest · 4 nights · all inclusive</div>
         <div class="package-includes">
           <h4>Your stay includes</h4>
@@ -2072,7 +2302,7 @@
         <div class="package-badge">Most Popular</div>
         <div class="package-name">The Romanos <em>Luxury Collection</em></div>
         <div class="package-tag">The signature experience</div>
-        <div class="package-price"><span class="currency">£</span>6,495</div>
+        <div class="package-price"><span class="currency">€</span>6,495</div>
         <div class="package-price-note">per guest · 4 nights · all inclusive</div>
         <div class="package-includes">
           <h4>Your stay includes</h4>
@@ -2091,7 +2321,7 @@
       <div class="package">
         <div class="package-name">Mandarin Oriental</div>
         <div class="package-tag">The most exclusive stay</div>
-        <div class="package-price"><span class="currency">£</span>8,995</div>
+        <div class="package-price"><span class="currency">€</span>10,495</div>
         <div class="package-price-note">per guest · 4 nights · all inclusive</div>
         <div class="package-includes">
           <h4>Your stay includes</h4>
@@ -2276,8 +2506,8 @@
         <div class="form-group">
           <label for="experience">Which experience interests you?</label>
           <select id="experience">
-            <option>One Day Intensive (£1,495)</option>
-            <option>Three Day School (from £5,495)</option>
+            <option>One Day Intensive (from €1,495)</option>
+            <option>Three Day School (from €4,995)</option>
             <option>Both, I'd like to know more</option>
           </select>
         </div>
@@ -2307,6 +2537,7 @@
           <label for="stay">Preferred Stay (Three Day School only)</label>
           <select id="stay">
             <option>Not applicable, I'm booking the One Day</option>
+            <option>The W Costa Navarino</option>
             <option>The Westin</option>
             <option>The Romanos, Luxury Collection</option>
             <option>Mandarin Oriental</option>

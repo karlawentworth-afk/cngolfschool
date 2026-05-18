@@ -6,14 +6,25 @@ Marketing site for **The Navarino Golf School for Women**, a partnership between
 
 Single-file HTML site (`index.html`). No build step. Deploys to Netlify on push to `main`.
 
-## The two products
+## The two products (hotel-as-stage model)
 
-**One Day Intensive** at £1,495 per guest. For resort guests. Pre-arrival profile, then a full day of coaching, lunch, 9 holes on course, 30-day plan. Funnel product.
+Both products are offered across four hotels at Costa Navarino. The school, coaches, and methodology are identical at every property. Pricing reflects the hotel, not the school.
 
-**Three Day School** from £5,495 per guest, three accommodation tiers:
-- The Westin: £5,495
-- The Romanos (featured/most popular): £6,495
-- Mandarin Oriental: £8,995
+**One Day Intensive** at four hotels:
+- The W Costa Navarino: €1,495
+- The Westin: €1,795
+- The Romanos (featured/most popular): €2,195
+- Mandarin Oriental: €2,795
+
+Pre-arrival profile, then a full day of coaching, lunch, 9 holes on course, 30-day plan. Funnel product.
+
+**Three Day School** at four hotels (4 nights all-inclusive):
+- The W Costa Navarino: €4,995
+- The Westin: €5,495
+- The Romanos (featured/most popular): €6,495
+- Mandarin Oriental: €10,495
+
+Three days intensive coaching, one-to-one session, four skills stations, graduation dinner, 90-day follow-on programme.
 
 Both products allow guests to extend their stay at the resort.
 
