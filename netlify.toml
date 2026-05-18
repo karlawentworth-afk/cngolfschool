@@ -1,5 +1,5 @@
 # Netlify configuration for The Navarino Golf School site
-# No build step — just serve the root folder.
+# No build step - just serve the root folder.
 
 [build]
   publish = "."
@@ -12,6 +12,18 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Belt-and-braces noindex on the confidential pages
+# in addition to the in-page meta robots tag
+[[headers]]
+  for = "/partnership.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/board.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
 
 # Cache fonts and static assets for a year
 [[headers]]

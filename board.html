@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Board Paper · The Navarino Golf School · Internal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a2733;
+    --ink-soft: #3a4a5a;
+    --sea: #2d4a5f;
+    --sea-deep: #16344a;
+    --sand: #e8dfd1;
+    --sand-light: #f5efe5;
+    --olive: #7a8467;
+    --gold: #b08d57;
+    --paper: #fbf8f2;
+    --white: #ffffff;
+    --line: rgba(26, 39, 51, 0.12);
+    --line-soft: rgba(26, 39, 51, 0.06);
+    --risk-amber: #c8893a;
+    --risk-red: #b8534a;
+    --risk-green: #6a8a5a;
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --max-width: 1100px;
+    --gutter: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); }
+  h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 1.5rem; }
+  h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); margin-bottom: 1rem; }
+  h4 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+
+  p { margin-bottom: 1.2rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--olive);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  section { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+
+  .display-italic { font-style: italic; color: var(--gold); }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.1);
+  }
+
+  .topbar-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .topbar-brand {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--paper);
+  }
+
+  .topbar-brand span {
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .topbar-meta {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--paper);
+    padding: clamp(4rem, 9vw, 6rem) 0 clamp(3rem, 6vw, 4rem);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero h1 {
+    margin-bottom: 1.5rem;
+    max-width: 18ch;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-lede {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+    font-weight: 300;
+    color: var(--ink-soft);
+    max-width: 55ch;
+    line-height: 1.5;
+  }
+
+  .hero-meta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 700px) { .hero-meta { grid-template-columns: repeat(2, 1fr); } }
+
+  .hero-meta-item .label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--olive);
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-meta-item .value {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--ink);
+    line-height: 1.2;
+  }
+
+  /* ===== TL;DR BOX ===== */
+  .tldr {
+    background: var(--sand-light);
+    padding: clamp(3rem, 6vw, 4.5rem) 0;
+  }
+
+  .tldr-inner {
+    max-width: 820px;
+    margin: 0 auto;
+    background: var(--paper);
+    padding: clamp(2rem, 4vw, 3rem);
+    border-left: 4px solid var(--gold);
+  }
+
+  .tldr h3 {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+
+  .tldr h2 {
+    font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+
+  .tldr-ask {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.92rem;
+  }
+
+  .tldr-ask strong {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--olive);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+
+  /* ===== TWO COL ===== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  @media (max-width: 800px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  .col-heading h2 { margin-bottom: 0.8rem; }
+  .col-heading .eyebrow { margin-bottom: 1rem; }
+
+  /* ===== STRATEGIC RATIONALE ===== */
+  .rationale {
+    background: var(--paper);
+  }
+
+  .rationale-points {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .rationale-point {
+    padding-left: 2rem;
+    position: relative;
+    border-left: 1px solid var(--line);
+    padding-bottom: 1rem;
+  }
+
+  .rationale-point::before {
+    content: "";
+    position: absolute;
+    left: -3px;
+    top: 0.2rem;
+    width: 5px;
+    height: 5px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .rationale-point h4 {
+    color: var(--ink);
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .rationale-point p {
+    font-size: 0.92rem;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* ===== NUMBERS / FINANCIAL ===== */
+  .financials {
+    background: var(--sand-light);
+  }
+
+  .fin-tables {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .fin-table {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    overflow: hidden;
+  }
+
+  .fin-table-head {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 1rem 1.5rem;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+  }
+
+  .fin-table-head em {
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+  }
+
+  .fin-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: center;
+    font-size: 0.92rem;
+  }
+
+  .fin-row:last-child { border-bottom: none; }
+
+  .fin-row.head {
+    background: var(--sand-light);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--olive);
+    padding: 0.7rem 1.5rem;
+  }
+
+  .fin-row.total {
+    background: var(--sand-light);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    color: var(--ink);
+    border-top: 2px solid var(--gold);
+  }
+
+  .fin-row.total .fin-label {
+    font-style: italic;
+  }
+
+  .fin-label { color: var(--ink); }
+  .fin-value { font-family: var(--serif); color: var(--ink); }
+
+  @media (max-width: 700px) {
+    .fin-row { grid-template-columns: 2fr 1fr; gap: 0.5rem; padding: 1rem; }
+    .fin-row > div:nth-child(n+3) { display: none; }
+    .fin-row.head { display: none; }
+  }
+
+  /* ===== INVESTMENT REQUIRED ===== */
+  .investment {
+    background: var(--paper);
+  }
+
+  .inv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 800px) { .inv-grid { grid-template-columns: 1fr; } }
+
+  .inv-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 1.8rem;
+  }
+
+  .inv-card h4 {
+    color: var(--ink);
+    font-size: 1.1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .inv-card .inv-amount {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .inv-card p { font-size: 0.88rem; margin: 0; }
+
+  /* ===== RISK ===== */
+  .risks {
+    background: var(--sea-deep);
+    color: var(--sand-light);
+  }
+
+  .risks .eyebrow { color: var(--gold); }
+  .risks h2 { color: var(--paper); }
+  .risks p { color: rgba(251, 248, 242, 0.85); }
+
+  .risk-list {
+    margin-top: 2rem;
+    list-style: none;
+  }
+
+  .risk-item {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.15);
+    display: grid;
+    grid-template-columns: 90px 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media (max-width: 700px) {
+    .risk-item { grid-template-columns: 1fr; gap: 0.6rem; }
+  }
+
+  .risk-item:last-child { border-bottom: none; }
+
+  .risk-level {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    border-radius: 2px;
+    align-self: start;
+  }
+
+  .risk-level.high { background: var(--risk-red); color: var(--paper); }
+  .risk-level.medium { background: var(--risk-amber); color: var(--ink); }
+  .risk-level.low { background: var(--risk-green); color: var(--paper); }
+
+  .risk-text h4 {
+    font-family: var(--serif);
+    color: var(--paper);
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .risk-text p {
+    font-size: 0.88rem;
+    margin: 0;
+    color: rgba(251, 248, 242, 0.8);
+  }
+
+  .risk-mitigation {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* ===== STAGE GATES ===== */
+  .gates {
+    background: var(--sand-light);
+  }
+
+  .gates-list {
+    margin-top: 2.5rem;
+    display: grid;
+    gap: 1rem;
+  }
+
+  .gate {
+    background: var(--paper);
+    border-left: 3px solid var(--gold);
+    padding: 1.5rem 1.8rem;
+    display: grid;
+    grid-template-columns: 130px 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    .gate { grid-template-columns: 1fr; gap: 0.6rem; }
+  }
+
+  .gate-when {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1rem;
+  }
+
+  .gate-trigger h4 {
+    color: var(--ink);
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .gate-trigger p {
+    font-size: 0.85rem;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .gate-decision {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ===== ASK ===== */
+  .ask {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .ask .eyebrow { color: var(--gold); }
+  .ask h2 { color: var(--paper); }
+
+  .ask-content {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ask-content p { color: rgba(251, 248, 242, 0.9); font-size: 1.05rem; }
+
+  .ask-items {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+  }
+
+  @media (max-width: 700px) { .ask-items { grid-template-columns: 1fr; } }
+
+  .ask-item {
+    background: rgba(251, 248, 242, 0.05);
+    border: 1px solid rgba(251, 248, 242, 0.15);
+    padding: 1.5rem;
+  }
+
+  .ask-item .ask-label {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+
+  .ask-item h4 {
+    font-family: var(--serif);
+    color: var(--paper);
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .ask-item p {
+    font-size: 0.88rem;
+    color: rgba(251, 248, 242, 0.85);
+    margin: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--ink);
+    color: rgba(251, 248, 242, 0.5);
+    padding: 1.5rem 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    text-align: center;
+    border-top: 1px solid rgba(251, 248, 242, 0.1);
+  }
+
+  /* ===== CONFIDENTIAL TAG ===== */
+  .confidential {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--risk-red);
+    color: var(--paper);
+    padding: 0.6rem 1.1rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 500;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">
+      LADIES LOVE GOLF
+      <span>Board Paper · Strictly Confidential</span>
+    </div>
+    <div class="topbar-meta">For Board Review · 2026 Season</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Board Paper</span>
+    <h1>The Navarino Golf School: <em>A 2026 Season Plan.</em></h1>
+    <p class="hero-lede">A proposal to launch the LLG Golf School at Costa Navarino in partnership with the resort, delivering 8 to 12 schools across the 2026 season at four hotel tiers, with measurable revenue, brand and strategic upside for the business.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="label">Partner</div>
+        <div class="value">Costa Navarino</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Season</div>
+        <div class="value">April to October 2026</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Scale</div>
+        <div class="value">8 to 12 Schools</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Status</div>
+        <div class="value">Amber · Pending Sign-off</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TL;DR -->
+<section class="tldr">
+  <div class="container">
+    <div class="tldr-inner">
+      <h3>The Headline</h3>
+      <h2>A real revenue opportunity, low capital exposure, and strategic validation of LLG's golf school IP. The board is asked to approve the partnership and a modest investment in marketing, materials and one additional coach for the 2026 season.</h2>
+      <div class="tldr-ask">
+        <strong>The ask</strong>
+        Approval of partnership terms with Costa Navarino, a 2026 marketing and materials budget of approximately £25k, and authority to contract a third PGA professional for delivery.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRATEGIC RATIONALE -->
+<section class="rationale">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-heading">
+        <span class="eyebrow">Strategic Rationale</span>
+        <h2>Why this matters for LLG.</h2>
+        <p>This is not a one-off revenue line. It is the first commercial deployment of the LLG psychological profiling system in a partnership model with a five-star resort. The implications go beyond 2026.</p>
+      </div>
+      <div class="rationale-points">
+
+        <div class="rationale-point">
+          <h4>Validates the IP commercially</h4>
+          <p>The 49-profile psychological coaching system has been built, tested and refined. A successful 2026 season proves that hotels and resorts will pay for it. That validation underpins every subsequent licensing conversation.</p>
+        </div>
+
+        <div class="rationale-point">
+          <h4>Establishes the partnership template</h4>
+          <p>The Costa Navarino deal becomes the reference case. Future conversations with other five-star resorts (UK, Portugal, Spain) are far easier when we can point to an existing partnership with a destination of this calibre.</p>
+        </div>
+
+        <div class="rationale-point">
+          <h4>Builds brand authority beyond the UK</h4>
+          <p>Costa Navarino's audience is global. Each cohort produces testimonials, photography, social content and case studies that elevate LLG's positioning into the international premium golf travel category.</p>
+        </div>
+
+        <div class="rationale-point">
+          <h4>Creates a recurring revenue model</h4>
+          <p>Once embedded with the resort, schools become annual. The 2026 launch sets up 2027, 2028 and beyond, with format expansion (men, beginners, juniors) opening additional revenue streams from the same partnership.</p>
+        </div>
+
+        <div class="rationale-point">
+          <h4>Diversifies the LLG business</h4>
+          <p>The school sits alongside our existing physical coaching, digital coaching and events business. It is higher-margin, lower-frequency, and reaches a higher-value customer than our current offering.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINANCIAL OPPORTUNITY -->
+<section class="financials">
+  <div class="container">
+    <div style="max-width: 800px;">
+      <span class="eyebrow">Financial Opportunity</span>
+      <h2>Revenue projections for 2026.</h2>
+      <p>Modelled at conservative cohort sizes (6 of 8 guests average). Three Day School accommodation revenue flows entirely to Costa Navarino. LLG retains coaching, profile and programme revenue. All figures in euros.</p>
+    </div>
+
+    <div class="fin-tables">
+
+      <div class="fin-table">
+        <div class="fin-table-head">One Day Intensive <em>12 schools, average 6 guests</em></div>
+        <div class="fin-row head">
+          <div>Hotel</div>
+          <div>Per Guest</div>
+          <div>Per Cohort</div>
+          <div>Cohorts</div>
+          <div>Annual</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">The W</div>
+          <div>€1,495</div>
+          <div>€8,970</div>
+          <div>3</div>
+          <div class="fin-value">€26,910</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">The Westin</div>
+          <div>€1,795</div>
+          <div>€10,770</div>
+          <div>3</div>
+          <div class="fin-value">€32,310</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">The Romanos</div>
+          <div>€2,195</div>
+          <div>€13,170</div>
+          <div>4</div>
+          <div class="fin-value">€52,680</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">Mandarin Oriental</div>
+          <div>€2,795</div>
+          <div>€16,770</div>
+          <div>2</div>
+          <div class="fin-value">€33,540</div>
+        </div>
+        <div class="fin-row total">
+          <div class="fin-label">One Day Annual Revenue</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€145,440</div>
+        </div>
+      </div>
+
+      <div class="fin-table">
+        <div class="fin-table-head">Three Day School <em>8 schools, average 6 guests</em></div>
+        <div class="fin-row head">
+          <div>Hotel</div>
+          <div>Per Guest</div>
+          <div>Per Cohort</div>
+          <div>Cohorts</div>
+          <div>Annual</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">The W</div>
+          <div>€4,995</div>
+          <div>€29,970</div>
+          <div>2</div>
+          <div class="fin-value">€59,940</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">The Westin</div>
+          <div>€5,495</div>
+          <div>€32,970</div>
+          <div>2</div>
+          <div class="fin-value">€65,940</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">The Romanos</div>
+          <div>€6,495</div>
+          <div>€38,970</div>
+          <div>3</div>
+          <div class="fin-value">€116,910</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">Mandarin Oriental</div>
+          <div>€10,495</div>
+          <div>€62,970</div>
+          <div>1</div>
+          <div class="fin-value">€62,970</div>
+        </div>
+        <div class="fin-row total">
+          <div class="fin-label">Three Day Gross Revenue</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€305,760</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label" style="font-style:italic; color: var(--ink-soft);">Less accommodation cost to CN</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value" style="color: var(--risk-red);">(~€95,000)</div>
+        </div>
+        <div class="fin-row total">
+          <div class="fin-label">Three Day Net to LLG</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€210,760</div>
+        </div>
+      </div>
+
+      <div class="fin-table">
+        <div class="fin-table-head">Combined LLG Revenue Picture</div>
+        <div class="fin-row">
+          <div class="fin-label">One Day Intensive (12 schools)</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€145,440</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label">Three Day School net (8 schools)</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€210,760</div>
+        </div>
+        <div class="fin-row total">
+          <div class="fin-label">Total LLG 2026 Net Revenue</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€356,200</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label" style="font-style:italic;">Less coach payments (Karla, John, third pro)</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value" style="color: var(--risk-red);">(~€140,000)</div>
+        </div>
+        <div class="fin-row">
+          <div class="fin-label" style="font-style:italic;">Less marketing, materials, admin</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value" style="color: var(--risk-red);">(~€40,000)</div>
+        </div>
+        <div class="fin-row total" style="border-top: 2px solid var(--gold);">
+          <div class="fin-label">LLG Business Net Profit Estimate</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="fin-value">€176,200</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; font-style: italic; color: var(--ink-soft);">Projections are deliberately conservative. Full cohorts (8 of 8 guests) would lift net profit by approximately 30%. Coach payments include Karla and John at PGA professional rates plus a third contracted coach. Marketing budget assumes new partnership announcement campaign, materials production, and one full-time admin support during the season.</p>
+  </div>
+</section>
+
+<!-- INVESTMENT REQUIRED -->
+<section class="investment">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="eyebrow">Investment Required</span>
+      <h2>What needs to be spent <em class="display-italic">to deliver.</em></h2>
+      <p>The school operates almost entirely on a pay-as-we-go model. Capital exposure is genuinely low.</p>
+    </div>
+    <div class="inv-grid">
+
+      <div class="inv-card">
+        <h4>Marketing &amp; Launch</h4>
+        <div class="inv-amount">£15,000</div>
+        <p>Partnership announcement, video content, photography from first cohort, social campaign and PR push. Recoverable from cohort 1 alone.</p>
+      </div>
+
+      <div class="inv-card">
+        <h4>Materials &amp; Workbooks</h4>
+        <div class="inv-amount">£5,000</div>
+        <p>Production of personalised workbooks, training aids packs, branded materials, and the printed collateral needed for each cohort. Variable cost beyond initial setup.</p>
+      </div>
+
+      <div class="inv-card">
+        <h4>Third Coach &amp; Travel</h4>
+        <div class="inv-amount">£5,000</div>
+        <p>Contracted PGA professional cost across the season, plus coach flights and incidentals. Rooms and meals provided complimentary by Costa Navarino.</p>
+      </div>
+
+    </div>
+    <p style="margin-top: 2rem; font-size: 0.92rem;"><strong style="color: var(--ink); font-weight: 500;">Total approximate investment: £25,000</strong>, against a projected net business profit of approximately £150,000 in 2026. Break-even is reached after cohort 2.</p>
+  </div>
+</section>
+
+<!-- RISKS -->
+<section class="risks">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="eyebrow">Risk Profile</span>
+      <h2>What could go wrong, and what we are doing about it.</h2>
+      <p>The board should be aware of the principal risks. None are individually material to LLG, but they should be visible.</p>
+    </div>
+
+    <ul class="risk-list">
+
+      <li class="risk-item">
+        <div><span class="risk-level medium">Medium</span></div>
+        <div class="risk-text">
+          <h4>Cohort sell-through</h4>
+          <p>Schools may not all fill at full capacity. Selling 8 places per school across 20 schools requires meaningful recruitment effort.</p>
+        </div>
+        <div class="risk-mitigation">Mitigation: Golf Breaks partnership for marketing reach, LLG community of 10k+ engaged women, Costa Navarino's own database, and conservative break-even at 4 guests per cohort.</div>
+      </li>
+
+      <li class="risk-item">
+        <div><span class="risk-level low">Low</span></div>
+        <div class="risk-text">
+          <h4>Partnership terms</h4>
+          <p>Costa Navarino may want to negotiate harder commercial terms (revenue share, exclusivity, etc.) than currently proposed.</p>
+        </div>
+        <div class="risk-mitigation">Mitigation: We are offering them standard accommodation rates and meaningful marketing reach. Our IP is the leverage. Walk-away alternatives exist (UK five-star options).</div>
+      </li>
+
+      <li class="risk-item">
+        <div><span class="risk-level medium">Medium</span></div>
+        <div class="risk-text">
+          <h4>Coach availability and consistency</h4>
+          <p>Karla and John lead delivery. A third coach is needed for full cover. Illness, scheduling or pro retention could disrupt delivery.</p>
+        </div>
+        <div class="risk-mitigation">Mitigation: Building a small bench of trained coaches familiar with the LLG methodology. Documented delivery system means new coaches can be onboarded quickly.</div>
+      </li>
+
+      <li class="risk-item">
+        <div><span class="risk-level low">Low</span></div>
+        <div class="risk-text">
+          <h4>Guest experience inconsistency</h4>
+          <p>Running the same school across four different hotels could create variable experiences and review divergence.</p>
+        </div>
+        <div class="risk-mitigation">Mitigation: The coaching content is identical across all four. Only the hotel-specific elements (lunch venue, welcome experience) vary, intentionally, to reflect each property.</div>
+      </li>
+
+      <li class="risk-item">
+        <div><span class="risk-level low">Low</span></div>
+        <div class="risk-text">
+          <h4>IP protection</h4>
+          <p>The 49-profile system and methodology are LLG IP. Risk of replication by competitors or by Costa Navarino itself in future.</p>
+        </div>
+        <div class="risk-mitigation">Mitigation: Partnership agreement to include IP protection clauses. The system itself is hard to replicate without the 15 years of profiling data behind it.</div>
+      </li>
+
+      <li class="risk-item">
+        <div><span class="risk-level low">Low</span></div>
+        <div class="risk-text">
+          <h4>Weather and external disruption</h4>
+          <p>April and October schools are slightly weather-sensitive. Strikes, travel disruption or geopolitical events could affect individual cohorts.</p>
+        </div>
+        <div class="risk-mitigation">Mitigation: Schools scheduled across May, June, September as core dates. Travel insurance required for guests. Costa Navarino has indoor facility alternatives.</div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- STAGE GATES -->
+<section class="gates">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="eyebrow">Stage Gates</span>
+      <h2>Decision points the board will see.</h2>
+      <p>The 2026 season is structured around clear go / no-go reviews. The board does not commit to the full programme up front, only to enable the partnership and the first stage.</p>
+    </div>
+
+    <div class="gates-list">
+
+      <div class="gate">
+        <div class="gate-when">— Q1 2026</div>
+        <div class="gate-trigger">
+          <h4>Partnership signing</h4>
+          <p>Heads of terms agreed with Costa Navarino. Dates locked. Marketing approved for launch.</p>
+        </div>
+        <div class="gate-decision">Board approval required to sign. Cost exposure to date: marketing setup only.</div>
+      </div>
+
+      <div class="gate">
+        <div class="gate-when">— Q2 2026</div>
+        <div class="gate-trigger">
+          <h4>Cohort 1 review</h4>
+          <p>First school delivered. Guest feedback, handicap data, resort feedback assessed. NPS measured.</p>
+        </div>
+        <div class="gate-decision">Continue or pause review. Cost exposure to date: ~£15k.</div>
+      </div>
+
+      <div class="gate">
+        <div class="gate-when">— Q3 2026</div>
+        <div class="gate-trigger">
+          <h4>Mid-season review</h4>
+          <p>3 or 4 schools complete. Revenue, P&amp;L, guest satisfaction, resort partnership health reviewed jointly.</p>
+        </div>
+        <div class="gate-decision">Calibrate September and October schedule. Decide on 2027 commitments.</div>
+      </div>
+
+      <div class="gate">
+        <div class="gate-when">— Q4 2026</div>
+        <div class="gate-trigger">
+          <h4>Season close</h4>
+          <p>Full season review. Net profit, cohort NPS, partnership health, format expansion appetite.</p>
+        </div>
+        <div class="gate-decision">Board decision on 2027 expansion: more cohorts, additional formats (men, juniors, beginners), licensing model.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- THE ASK -->
+<section class="ask">
+  <div class="container">
+    <div class="ask-content">
+      <span class="eyebrow">The Board Ask</span>
+      <h2>Three approvals to proceed.</h2>
+      <p>The board is asked to approve the items below, enabling the partnership with Costa Navarino to be formally signed and the 2026 season to begin recruitment.</p>
+    </div>
+
+    <div class="ask-items">
+
+      <div class="ask-item">
+        <div class="ask-label">— 01</div>
+        <h4>Authority to sign</h4>
+        <p>Approval to enter the partnership agreement with Costa Navarino on the terms set out, with usual legal review.</p>
+      </div>
+
+      <div class="ask-item">
+        <div class="ask-label">— 02</div>
+        <h4>2026 budget approval</h4>
+        <p>Approval of the approximately £25,000 marketing, materials and contracted coach budget for the 2026 season.</p>
+      </div>
+
+      <div class="ask-item">
+        <div class="ask-label">— 03</div>
+        <h4>Reporting cadence</h4>
+        <p>Agreement to quarterly board updates with stage-gate decisions at the points described above.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  Ladies Love Golf · Strictly Confidential · Board Paper 2026
+</div>
+
+<div class="confidential">Confidential · Board Only</div>
+
+</body>
+</html>

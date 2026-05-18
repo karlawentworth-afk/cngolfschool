@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Partnership Proposal · The Navarino Golf School for Women</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a2733;
+    --ink-soft: #3a4a5a;
+    --sea: #2d4a5f;
+    --sea-deep: #16344a;
+    --sand: #e8dfd1;
+    --sand-light: #f5efe5;
+    --olive: #7a8467;
+    --gold: #b08d57;
+    --paper: #fbf8f2;
+    --white: #ffffff;
+    --line: rgba(26, 39, 51, 0.12);
+    --line-soft: rgba(26, 39, 51, 0.06);
+    --serif: 'Cormorant Garamond', 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --max-width: 1100px;
+    --gutter: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--serif);
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+  }
+
+  h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); }
+  h2 { font-size: clamp(1.8rem, 3.8vw, 2.8rem); margin-bottom: 1.5rem; }
+  h3 { font-size: clamp(1.3rem, 2.2vw, 1.7rem); margin-bottom: 1rem; }
+  h4 { font-size: 1.15rem; margin-bottom: 0.6rem; }
+
+  p { margin-bottom: 1.2rem; }
+  p:last-child { margin-bottom: 0; }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.32em;
+    color: var(--olive);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  section { padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+  section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
+
+  .display-italic { font-style: italic; color: var(--gold); }
+
+  /* ===== TOP BAR ===== */
+  .topbar {
+    background: var(--paper);
+    border-bottom: 1px solid var(--line-soft);
+    padding: 1.2rem 0;
+  }
+
+  .topbar-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .brand-cn {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .brand-cn span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.28em;
+    color: var(--olive);
+    margin-top: 4px;
+  }
+
+  .brand-divider {
+    width: 1px;
+    height: 24px;
+    background: var(--line);
+  }
+
+  .brand-llg {
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .brand-llg em {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--gold);
+    display: block;
+    margin-top: 2px;
+  }
+
+  .topbar-meta {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: var(--sea-deep);
+    color: var(--paper);
+    padding: clamp(4rem, 9vw, 7rem) 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 80% 20%, rgba(176, 141, 87, 0.18), transparent),
+      radial-gradient(ellipse 50% 40% at 10% 100%, rgba(176, 141, 87, 0.08), transparent);
+    pointer-events: none;
+  }
+
+  .hero .container { position: relative; }
+
+  .hero .eyebrow { color: var(--gold); }
+
+  .hero h1 {
+    color: var(--paper);
+    margin-bottom: 2rem;
+    max-width: 18ch;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--sand-light);
+  }
+
+  .hero-lede {
+    font-family: var(--serif);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 300;
+    color: rgba(251, 248, 242, 0.9);
+    max-width: 50ch;
+    line-height: 1.5;
+  }
+
+  .hero-meta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(251, 248, 242, 0.2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 700px;
+  }
+
+  @media (max-width: 600px) { .hero-meta { grid-template-columns: 1fr; } }
+
+  .hero-meta-item .label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: rgba(251, 248, 242, 0.6);
+    margin-bottom: 0.4rem;
+  }
+
+  .hero-meta-item .value {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--paper);
+    line-height: 1.2;
+  }
+
+  /* ===== OPENING SUMMARY ===== */
+  .summary {
+    background: var(--paper);
+    text-align: center;
+  }
+
+  .summary-content {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .summary h2 {
+    font-weight: 300;
+    line-height: 1.3;
+  }
+
+  .summary h2 em { color: var(--gold); }
+
+  .summary-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2.5rem auto;
+  }
+
+  /* ===== TWO COLUMN ===== */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  @media (max-width: 800px) {
+    .two-col { grid-template-columns: 1fr; }
+  }
+
+  /* ===== NUMBERS BAND ===== */
+  .numbers {
+    background: var(--sand-light);
+  }
+
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 800px) { .numbers-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  .number-item {
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .number-figure {
+    font-family: var(--serif);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+
+  .number-figure em { color: var(--gold); font-style: italic; }
+
+  .number-label {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  /* ===== TABLE / PRICING ===== */
+  .pricing-table {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  .pricing-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    padding: 1.3rem 1.8rem;
+    border-bottom: 1px solid var(--line-soft);
+    align-items: center;
+  }
+
+  .pricing-row:last-child { border-bottom: none; }
+
+  .pricing-row.head {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    padding: 1rem 1.8rem;
+  }
+
+  .pricing-row.featured {
+    background: var(--sand-light);
+  }
+
+  .pricing-row.featured .pricing-hotel::after {
+    content: "Most popular";
+    display: inline-block;
+    margin-left: 0.7rem;
+    background: var(--gold);
+    color: var(--paper);
+    padding: 0.2rem 0.6rem;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    vertical-align: middle;
+  }
+
+  .pricing-hotel {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+
+  .pricing-hotel em {
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .pricing-price {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--ink);
+  }
+
+  .pricing-price .small {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    color: var(--ink-soft);
+    display: block;
+    margin-top: 2px;
+  }
+
+  @media (max-width: 700px) {
+    .pricing-row { grid-template-columns: 1fr 1fr; gap: 0.5rem 1rem; }
+    .pricing-row.head { display: none; }
+    .pricing-row .pricing-hotel { grid-column: 1 / -1; padding-bottom: 0.4rem; border-bottom: 1px solid var(--line-soft); margin-bottom: 0.6rem; }
+    .pricing-price::before {
+      content: attr(data-label);
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--olive);
+      margin-bottom: 4px;
+    }
+  }
+
+  /* ===== BENEFITS LIST ===== */
+  .benefits {
+    background: var(--paper);
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 3rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 700px) { .benefits-grid { grid-template-columns: 1fr; } }
+
+  .benefit {
+    padding-left: 2.5rem;
+    position: relative;
+  }
+
+  .benefit::before {
+    content: counter(benefit, decimal-leading-zero);
+    counter-increment: benefit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.1rem;
+  }
+
+  .benefits-grid { counter-reset: benefit; }
+
+  .benefit h4 {
+    color: var(--ink);
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .benefit p {
+    font-size: 0.92rem;
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  /* ===== REQUIREMENTS BOX ===== */
+  .requirements {
+    background: var(--sea-deep);
+    color: var(--sand-light);
+  }
+
+  .requirements .eyebrow { color: var(--gold); }
+  .requirements h2 { color: var(--paper); }
+  .requirements p { color: rgba(251, 248, 242, 0.85); }
+
+  .req-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+
+  .req-list li {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(251, 248, 242, 0.15);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: baseline;
+  }
+
+  .req-list li:last-child { border-bottom: none; }
+
+  @media (max-width: 700px) {
+    .req-list li { grid-template-columns: 1fr; gap: 0.4rem; }
+  }
+
+  .req-label {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.05rem;
+  }
+
+  .req-detail {
+    font-size: 0.95rem;
+    color: rgba(251, 248, 242, 0.85);
+    line-height: 1.55;
+  }
+
+  /* ===== TIMELINE ===== */
+  .timeline {
+    background: var(--sand-light);
+  }
+
+  .timeline-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 800px) { .timeline-items { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 500px) { .timeline-items { grid-template-columns: 1fr; } }
+
+  .timeline-item {
+    background: var(--paper);
+    padding: 1.8rem 1.5rem;
+    border-top: 2px solid var(--gold);
+    position: relative;
+  }
+
+  .timeline-quarter {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--gold);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .timeline-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .timeline-item p { font-size: 0.85rem; margin: 0; line-height: 1.5; }
+
+  /* ===== FUTURE FORMATS ===== */
+  .future {
+    background: var(--paper);
+  }
+
+  .future-formats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 700px) { .future-formats { grid-template-columns: 1fr; } }
+
+  .future-card {
+    border: 1px solid var(--line);
+    padding: 1.5rem;
+    background: var(--paper);
+  }
+
+  .future-card h4 {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .future-card p { font-size: 0.9rem; margin: 0; line-height: 1.5; }
+
+  /* ===== CTA ===== */
+  .cta {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+  }
+
+  .cta .eyebrow { color: var(--gold); }
+  .cta h2 { color: var(--paper); margin-bottom: 1.5rem; }
+  .cta p { color: rgba(251, 248, 242, 0.85); max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; }
+
+  .cta-contact {
+    display: inline-flex;
+    gap: 2rem;
+    padding: 1.5rem 2rem;
+    background: rgba(251, 248, 242, 0.06);
+    border: 1px solid rgba(251, 248, 242, 0.15);
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cta-contact-item .label {
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  .cta-contact-item .value {
+    font-family: var(--serif);
+    color: var(--paper);
+    font-size: 1rem;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    background: var(--ink);
+    color: rgba(251, 248, 242, 0.5);
+    padding: 1.5rem 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    text-align: center;
+    border-top: 1px solid rgba(251, 248, 242, 0.1);
+  }
+
+  /* ===== CONFIDENTIAL TAG ===== */
+  .confidential {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background: var(--gold);
+    color: var(--ink);
+    padding: 0.6rem 1.1rem;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-weight: 500;
+    z-index: 100;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-brand">
+      <div class="brand-cn">
+        COSTA NAVARINO
+        <span>×</span>
+      </div>
+      <div class="brand-divider"></div>
+      <div class="brand-llg">
+        Methodology by<em>Ladies Love Golf</em>
+      </div>
+    </div>
+    <div class="topbar-meta">Partnership Proposal · 2026 Season</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">A Proposal for Costa Navarino</span>
+    <h1>The Navarino Golf School <em>for Women.</em></h1>
+    <p class="hero-lede">A premium, exclusive women's golf school delivered across all four Costa Navarino hotels in 2026. Bringing a new high-value guest segment to the resort, twelve times a year.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="label">Format</div>
+        <div class="value">One Day &amp; Three Day Schools</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">Hotels</div>
+        <div class="value">All Four Properties</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="label">2026 Cohorts</div>
+        <div class="value">8 to 12 Schools</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OPENING ARGUMENT -->
+<section class="summary">
+  <div class="container">
+    <div class="summary-content">
+      <span class="eyebrow">The Proposal</span>
+      <h2>A new women's golf product for Costa Navarino, <em>delivered by the only team in golf who can.</em></h2>
+      <div class="summary-divider"></div>
+      <p>Costa Navarino is already the European destination for serious golf. Four signature courses, year-round sun, the calibre of facilities that attracts the world's leading sports brands. Mouratoglou Tennis sits inside the Westin. Anazoe Spa stands beside it. There is one significant gap. Women's golf.</p>
+      <p>Ladies Love Golf has spent over fifteen years coaching women exclusively, and has built the only psychological profiling system for golf in the world. We are proposing a long-term partnership with Costa Navarino to deliver The Navarino Golf School for Women across all four hotels in the 2026 season. A new branded academy alongside Mouratoglou, drawing a new and high-value guest segment to the resort.</p>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS AT A GLANCE -->
+<section class="numbers">
+  <div class="container">
+    <div style="text-align:center; max-width: 720px; margin: 0 auto;">
+      <span class="eyebrow">2026 Season At A Glance</span>
+      <h2>What this looks like commercially.</h2>
+      <p>Based on a season of 8 to 12 schools across the four hotels, with an average cohort of 6 to 8 guests. Conservative projection.</p>
+    </div>
+    <div class="numbers-grid">
+      <div class="number-item">
+        <div class="number-figure"><em>72</em>–<em>96</em></div>
+        <div class="number-label">Confirmed school guests across the season</div>
+      </div>
+      <div class="number-item">
+        <div class="number-figure">288<em>+</em></div>
+        <div class="number-label">Resort room nights from Three Day Schools alone</div>
+      </div>
+      <div class="number-item">
+        <div class="number-figure">~<em>50%</em></div>
+        <div class="number-label">Expected extended stays with partners or families</div>
+      </div>
+      <div class="number-item">
+        <div class="number-figure">12<em>+</em></div>
+        <div class="number-label">High-value shoulder-season weeks filled</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING / PRODUCT -->
+<section class="tight" style="background: var(--paper);">
+  <div class="container">
+    <div style="max-width: 720px; margin: 0 auto 1rem; text-align: center;">
+      <span class="eyebrow">The Hotel Is Your Stage</span>
+      <h2>Two products, four hotels. <em class="display-italic">Each tier sells itself.</em></h2>
+      <p>The same psychological profiling system, the same workbook, the same PGA professionals. Delivered with the welcome, dining and atmosphere of each hotel. Pricing reflects the property, not the school.</p>
+    </div>
+
+    <h3 style="margin-top: 3rem; text-align: center;">One Day Intensive</h3>
+    <p style="text-align: center; font-size: 0.9rem; max-width: 620px; margin: 0 auto 1.5rem;">For resort guests already on property. Pre-arrival profile, full day of coaching, nine holes on course, signed thirty-day plan.</p>
+    <div class="pricing-table">
+      <div class="pricing-row head">
+        <div>Hotel</div>
+        <div>Guest Price</div>
+        <div>Per Cohort (8)</div>
+        <div>Season (12)</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-hotel">The W Costa Navarino</div>
+        <div class="pricing-price" data-label="Guest">€1,495</div>
+        <div class="pricing-price" data-label="Cohort">€11,960</div>
+        <div class="pricing-price" data-label="Season">€143,520</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-hotel">The Westin</div>
+        <div class="pricing-price" data-label="Guest">€1,795</div>
+        <div class="pricing-price" data-label="Cohort">€14,360</div>
+        <div class="pricing-price" data-label="Season">€172,320</div>
+      </div>
+      <div class="pricing-row featured">
+        <div class="pricing-hotel">The Romanos<em>Luxury Collection</em></div>
+        <div class="pricing-price" data-label="Guest">€2,195</div>
+        <div class="pricing-price" data-label="Cohort">€17,560</div>
+        <div class="pricing-price" data-label="Season">€210,720</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-hotel">Mandarin Oriental</div>
+        <div class="pricing-price" data-label="Guest">€2,795</div>
+        <div class="pricing-price" data-label="Cohort">€22,360</div>
+        <div class="pricing-price" data-label="Season">€268,320</div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 4rem; text-align: center;">Three Day School</h3>
+    <p style="text-align: center; font-size: 0.9rem; max-width: 620px; margin: 0 auto 1.5rem;">Four nights at Costa Navarino. The flagship transformation programme with ninety-day follow-on.</p>
+    <div class="pricing-table">
+      <div class="pricing-row head">
+        <div>Hotel</div>
+        <div>Guest Price</div>
+        <div>Per Cohort (8)</div>
+        <div>Season (8)</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-hotel">The W Costa Navarino</div>
+        <div class="pricing-price" data-label="Guest">€4,995</div>
+        <div class="pricing-price" data-label="Cohort">€39,960</div>
+        <div class="pricing-price" data-label="Season">€319,680</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-hotel">The Westin</div>
+        <div class="pricing-price" data-label="Guest">€5,495</div>
+        <div class="pricing-price" data-label="Cohort">€43,960</div>
+        <div class="pricing-price" data-label="Season">€351,680</div>
+      </div>
+      <div class="pricing-row featured">
+        <div class="pricing-hotel">The Romanos<em>Luxury Collection</em></div>
+        <div class="pricing-price" data-label="Guest">€6,495</div>
+        <div class="pricing-price" data-label="Cohort">€51,960</div>
+        <div class="pricing-price" data-label="Season">€415,680</div>
+      </div>
+      <div class="pricing-row">
+        <div class="pricing-hotel">Mandarin Oriental</div>
+        <div class="pricing-price" data-label="Guest">€10,495</div>
+        <div class="pricing-price" data-label="Cohort">€83,960</div>
+        <div class="pricing-price" data-label="Season">€671,680</div>
+      </div>
+    </div>
+
+    <p style="font-size: 0.82rem; color: var(--ink-soft); margin-top: 1.5rem; text-align: center; font-style: italic;">Three Day School prices include four nights accommodation and dining, paid by guests directly to Costa Navarino at standard rates. The accommodation revenue flows entirely to the resort.</p>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="container">
+    <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <span class="eyebrow">What's In It For Costa Navarino</span>
+      <h2>Eight reasons this is <em class="display-italic">commercially compelling.</em></h2>
+    </div>
+    <div class="benefits-grid">
+
+      <div class="benefit">
+        <h4>Shoulder-season occupancy</h4>
+        <p>Schools run April to June and September to October. Exactly the weeks Costa Navarino needs to fill. Our demographic actively prefers cooler weather for golf.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>Standard rate accommodation revenue</h4>
+        <p>All guest accommodation, food and beverage is paid directly to Costa Navarino at standard rates. No negotiated discount required. Three Day School at the Romanos alone could deliver €416k in resort revenue.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>Extended stays</h4>
+        <p>Many guests will arrive earlier or stay on with partners and family. Conservatively half will add nights. Across the season this is meaningful additional room nights and F&amp;B spend.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>An academy alongside Mouratoglou</h4>
+        <p>Costa Navarino is the place where serious people come to get better at things. Our school slots into that brand architecture as the women's golf authority. The only such academy in Europe.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>Cross-promotion to a new audience</h4>
+        <p>Ladies Love Golf reaches over ten thousand women in the UK with an industry-leading 89% email open rate. Plus our partnership with Golf Breaks, the world's largest golf travel operator. Costa Navarino is presented to an audience it cannot easily reach directly.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>High ancillary spend</h4>
+        <p>Our guests are exactly the right customer for Anazoe Spa, fine dining, cultural experiences and wine programmes. Wellness-focused professional women aged 45 to 65 with disposable income to spend.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>Repeat visits and referrals</h4>
+        <p>Cohorts become friendship groups. Improving golfers come back to play. Our 90-day post-school programme keeps the conversation alive and turns one stay into many.</p>
+      </div>
+
+      <div class="benefit">
+        <h4>Format expansion potential</h4>
+        <p>Once the women's model is proven, the same framework can be deployed for men, beginners, juniors or low handicappers. Whichever gap Costa Navarino most needs to fill next.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE NEED FROM YOU -->
+<section class="requirements">
+  <div class="container">
+    <div style="max-width: 720px;">
+      <span class="eyebrow">What We Need From You</span>
+      <h2>The hosting requirements are modest.</h2>
+      <p>The school is designed to slot into resort operations with minimal additional complexity. Everything below is needed only on school delivery dates.</p>
+    </div>
+
+    <ul class="req-list">
+      <li>
+        <div class="req-label">Guest accommodation</div>
+        <div class="req-detail">Up to 8 rooms across the chosen hotel for each Three Day School cohort. Standard rates apply, paid by guests directly. No special rate to LLG required.</div>
+      </li>
+      <li>
+        <div class="req-label">Coach hospitality</div>
+        <div class="req-detail">Complimentary half-board rooms for the three coaches during delivery. Family of coaches welcome when accompanying. This is the only commercial concession we ask for.</div>
+      </li>
+      <li>
+        <div class="req-label">Classroom space</div>
+        <div class="req-detail">A private meeting room for ten people, available for morning sessions across each school. Natural light, screen or projector, comfortable seating.</div>
+      </li>
+      <li>
+        <div class="req-label">Course access</div>
+        <div class="req-detail">Reserved tee times for the cohort on the Dunes Course or Bay Course. Practice facilities for two hours per morning. Standard green fees, paid by guests.</div>
+      </li>
+      <li>
+        <div class="req-label">Meals</div>
+        <div class="req-detail">Breakfast and lunch included in guest packages. Graduation dinner at a property restaurant of the hotel's choosing. All paid at standard rates.</div>
+      </li>
+      <li>
+        <div class="req-label">Marketing reach</div>
+        <div class="req-detail">Inclusion of the school in Costa Navarino's guest communications, app, in-room materials and reservations conversations. Cross-promotion to existing guests at all four properties.</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline">
+  <div class="container">
+    <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <span class="eyebrow">2026 Season Timeline</span>
+      <h2>From agreement to first cohort.</h2>
+      <p>A staged approach with clear milestones and decision points for both parties.</p>
+    </div>
+    <div class="timeline-items">
+      <div class="timeline-item">
+        <div class="timeline-quarter">— Q1 2026</div>
+        <h4>Partnership signing</h4>
+        <p>Heads of terms agreed. Dates booked. Marketing collateral co-developed. Pre-launch announcement to LLG community.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-quarter">— Q2 2026</div>
+        <h4>First cohorts</h4>
+        <p>Three to four schools delivered across April, May and June. First case studies captured. Resort guest feedback collected.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-quarter">— Q3 2026</div>
+        <h4>Mid-season review</h4>
+        <p>Joint review of cohort numbers, guest satisfaction, ancillary spend, resort revenue. Calibrate September and October.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-quarter">— Q4 2026</div>
+        <h4>Season close &amp; expansion</h4>
+        <p>Full-season results review. Decision on 2027 schedule, format expansion (men, juniors, beginners), and licensing potential.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE FORMATS -->
+<section class="future">
+  <div class="container">
+    <div style="max-width: 720px; margin: 0 auto; text-align: center;">
+      <span class="eyebrow">Beyond Women's Golf</span>
+      <h2>The 2026 season is the proof point. <em class="display-italic">Then we scale.</em></h2>
+      <p>Once the women's school model is proven at Costa Navarino, the same framework can be deployed for other underserved segments. The psychological profiling system works for any golfer.</p>
+    </div>
+    <div class="future-formats">
+      <div class="future-card">
+        <h4>The Beginners School</h4>
+        <p>For complete newcomers to the game. A confidence-led entry into golf, addressing the largest growth segment in the sport. Strong fit with the Westin's family positioning.</p>
+      </div>
+      <div class="future-card">
+        <h4>The Junior Academy</h4>
+        <p>For young golfers aged 12 to 18. Complements Mouratoglou's existing junior model. Family-driven destination demand for school holiday periods.</p>
+      </div>
+      <div class="future-card">
+        <h4>The Men's Intensive</h4>
+        <p>Same methodology, same coaches, same profiling system, redesigned for men. Strong fit with existing Costa Navarino guest demographics.</p>
+      </div>
+      <div class="future-card">
+        <h4>The Low Handicapper School</h4>
+        <p>For golfers handicap 18 or below seeking elite-level personal coaching. Premium positioning, smaller cohorts, higher price point. Aimed at the Mandarin Oriental guest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="container">
+    <span class="eyebrow">Next Steps</span>
+    <h2>We're ready when you are.</h2>
+    <p>We're seeking confirmation of Costa Navarino's appetite for a 2026 season partnership across all four hotels. Once agreed, we can move to a draft heads of terms within two weeks and announce to the LLG community shortly after.</p>
+    <div class="cta-contact">
+      <div class="cta-contact-item">
+        <div class="label">Lead</div>
+        <div class="value">Karla, Ladies Love Golf</div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="label">Email</div>
+        <div class="value">info@ladieslovegolf.com</div>
+      </div>
+      <div class="cta-contact-item">
+        <div class="label">Phone</div>
+        <div class="value">+44 770932613</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+  Costa Navarino × Ladies Love Golf · Partnership Proposal · 2026 Season
+</div>
+
+<div class="confidential">Confidential · For Discussion</div>
+
+</body>
+</html>
